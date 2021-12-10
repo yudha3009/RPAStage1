@@ -64,7 +64,6 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="checkEmail" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -95,7 +94,7 @@
             <av:Size x:Key="ShapeSize">200,51</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,267" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[mailList]">
+        <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[mailList]">
           <ui:ForEach.Body>
             <ActivityAction x:TypeArguments="snm:MailMessage">
               <ActivityAction.Argument>
@@ -107,7 +106,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Flowchart DisplayName="Flowchart-checkSubject" sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+                <Flowchart DisplayName="Flowchart-checkSubject" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_2">
                   <Flowchart.Variables>
                     <Variable x:TypeArguments="x:String" Name="year" />
                   </Flowchart.Variables>
@@ -179,7 +178,7 @@
                               <InArgument x:TypeArguments="x:String" xml:space="preserve">[text.Substring(
 	7,
 	(text.IndexOf(year)-1)-7
-)]</InArgument>
+).ToUpper()]</InArgument>
                             </Assign.Value>
                           </Assign>
                           <Assign DisplayName="Assign-posisi" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="Assign_3">
@@ -196,15 +195,9 @@
                           <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" FolderPath="Attachment" sap:VirtualizedContainerService.HintSize="334,89" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[item]" OverwriteExisting="False" />
                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="[&quot;Process\&quot;+jabatan+&quot;.xaml&quot;]">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="x:String" x:Key="jabatan">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="jabatan" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="year">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="year" />
-                              </InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="month">
-                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="month" />
-                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="jabatan">[jabatan]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="year">[year]</InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="month">[month]</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
                         </Sequence>
@@ -226,7 +219,7 @@
             <av:PointCollection x:Key="ConnectorLocation">300,161 300,214.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" FilterExpression="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="rpacctsel@gmail.com" EnableSSL="True" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_2" MailFolder="Inbox" MarkAsRead="False" Messages="[mailList]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Password="Infomedia1234" Port="993" SecureConnection="Auto" Server="imap.gmail.com" Top="2" />
+        <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" FilterExpression="{x:Null}" SecurePassword="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="rpacctsel@gmail.com" EnableSSL="True" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_2" MailFolder="Inbox" MarkAsRead="False" Messages="[mailList]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Password="Infomedia1234" Port="993" SecureConnection="Auto" Server="imap.gmail.com" TimeoutMS="999999999" Top="40" />
         <FlowStep.Next>
           <x:Reference>__ReferenceID2</x:Reference>
         </FlowStep.Next>

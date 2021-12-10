@@ -10,18 +10,18 @@
         "C:\\Users\\Yudha\\.nuget\\packages\\csvhelper/16.0.0\\lib/net45/CsvHelper.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\documentformat.openxml/2.5.0\\lib/DocumentFormat.OpenXml.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\microsoft.visualstudio.ole.interop/16.7.30328.74\\lib/net45/Microsoft.VisualStudio.OLE.Interop.dll",
-        "C:\\Users\\Yudha\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OOXML.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OpenXml4Net.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.OpenXmlFormats.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\npoi/2.4.1\\lib/net45/NPOI.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\sharpziplib/1.2.0\\lib/net45/ICSharpCode.SharpZipLib.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/Microsoft.Office.Interop.Excel.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/Microsoft.Vbe.Interop.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/Office.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/UiPath.Excel.Activities.Design.dll",
-        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/UiPath.Excel.Activities.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/UiPath.Excel.Activities.Package.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/UiPath.Excel.Activities.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.excel.activities/2.11.4\\lib/net461/UiPath.Excel.dll"
       ],
       "Path": "C:\\Users\\Yudha\\.nuget\\packages\\uipath.excel.activities\\2.11.4"
@@ -32,10 +32,10 @@
         "Version": "1.12.2"
       },
       "Assemblies": [
-        "C:\\Users\\Yudha\\.nuget\\packages\\google.apis/1.43.0\\lib/net45/Google.Apis.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\google.apis/1.43.0\\lib/net45/Google.Apis.PlatformServices.dll",
-        "C:\\Users\\Yudha\\.nuget\\packages\\google.apis.auth/1.43.0\\lib/net45/Google.Apis.Auth.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\google.apis/1.43.0\\lib/net45/Google.Apis.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\google.apis.auth/1.43.0\\lib/net45/Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\google.apis.auth/1.43.0\\lib/net45/Google.Apis.Auth.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\google.apis.calendar.v3/1.43.0.1872\\lib/net45/Google.Apis.Calendar.v3.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\google.apis.core/1.43.0\\lib/net45/Google.Apis.Core.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\google.apis.gmail.v1/1.43.0.1859\\lib/net45/Google.Apis.Gmail.v1.dll",
@@ -75,8 +75,8 @@
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/Microsoft.Office.Interop.Word.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/Office.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/UiPath.Mail.Activities.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/UiPath.Mail.Activities.Package.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/UiPath.Mail.Activities.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/UiPath.Mail.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.mail.activities/1.12.2\\lib/net461/UiPath.MainSessionServer.Shared.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.platform/21.10.0\\lib/net461/UiPath.Platform.dll",
@@ -164,24 +164,53 @@
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities/21.10.3\\lib/net461/UiPath.CV.Activities.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities/21.10.3\\lib/net461/UiPath.CV.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities/21.10.3\\lib/net461/UiPath.UIAutomation.Activities.Design.dll",
-        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities/21.10.3\\lib/net461/UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities/21.10.3\\lib/net461/UiPath.UIAutomationCore.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities/21.10.3\\lib/net461/UiPath.UIAutomationNext.Activities.Design.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities/21.10.3\\lib/net461/UiPath.UIAutomationNext.Activities.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities/21.10.3\\lib/net461/UiPath.UIAutomationNext.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities/21.10.3\\lib/net461/UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities/21.10.3\\lib/net461/UiPath.Wizards.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.AzureComputerVision.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.Core.dll",
-        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.GoogleCloud.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.Microsoft.dll",
-        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.Tesseract.dll"
+        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.Tesseract.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.vision/3.1.4\\lib/net461/UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.3"
+    },
+    {
+      "Package": {
+        "Id": "BalaReva.Excel.Activities",
+        "Version": "2020.3.3"
+      },
+      "Assemblies": [
+        "C:\\Users\\Yudha\\.nuget\\packages\\balareva.excel.activities/2020.3.3\\lib/BalaReva.Excel.Base.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\balareva.excel.activities/2020.3.3\\lib/BalaReva.Excel.Design.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\balareva.excel.activities/2020.3.3\\lib/BalaReva.Excel.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\balareva.excel.activities/2020.3.3\\lib/BalaReva.Excel.Utilities.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\microsoft.office.interop.excel/15.0.4795.1000\\lib/net20/Microsoft.Office.Interop.Excel.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\microsoftofficecore/15.0.0\\lib/net35/Office.dll"
+      ],
+      "Path": "C:\\Users\\Yudha\\.nuget\\packages\\balareva.excel.activities\\2020.3.3"
     }
   ],
   "Conflicts": [],
   "ResolvedDependencies": {
+    "BalaReva.Excel.Activities": {
+      "Id": "BalaReva.Excel.Activities",
+      "Version": "2020.3.3",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.Office.Interop.Excel",
+          "Item2": "[15.0.4795.1000, )"
+        },
+        {
+          "Item1": "MicrosoftOfficeCore",
+          "Item2": "[15.0.0, )"
+        }
+      ]
+    },
     "ClosedXML": {
       "Id": "ClosedXML",
       "Version": "0.87.1",
@@ -662,6 +691,11 @@
         }
       ]
     },
+    "Microsoft.Office.Interop.Excel": {
+      "Id": "Microsoft.Office.Interop.Excel",
+      "Version": "15.0.4795.1000",
+      "Dependencies": []
+    },
     "Microsoft.Rest.ClientRuntime": {
       "Id": "Microsoft.Rest.ClientRuntime",
       "Version": "2.3.21",
@@ -700,6 +734,11 @@
           "Item2": "[4.6.0, )"
         }
       ]
+    },
+    "MicrosoftOfficeCore": {
+      "Id": "MicrosoftOfficeCore",
+      "Version": "15.0.0",
+      "Dependencies": []
     },
     "MimeKit": {
       "Id": "MimeKit",
@@ -1351,6 +1390,19 @@
   "AllPackages": [
     {
       "Package": {
+        "Id": "BalaReva.Excel.Activities",
+        "Version": "2020.3.3"
+      },
+      "Assemblies": [
+        "C:\\Users\\Yudha\\.nuget\\packages\\balareva.excel.activities\\2020.3.3\\lib\\BalaReva.Excel.Base.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\balareva.excel.activities\\2020.3.3\\lib\\BalaReva.Excel.Design.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\balareva.excel.activities\\2020.3.3\\lib\\BalaReva.Excel.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\balareva.excel.activities\\2020.3.3\\lib\\BalaReva.Excel.Utilities.dll"
+      ],
+      "Path": "C:\\Users\\Yudha\\.nuget\\packages\\balareva.excel.activities\\2020.3.3"
+    },
+    {
+      "Package": {
         "Id": "ClosedXML",
         "Version": "0.87.1"
       },
@@ -1385,8 +1437,8 @@
         "Version": "1.43.0"
       },
       "Assemblies": [
-        "C:\\Users\\Yudha\\.nuget\\packages\\google.apis\\1.43.0\\lib\\net45\\Google.Apis.dll",
-        "C:\\Users\\Yudha\\.nuget\\packages\\google.apis\\1.43.0\\lib\\net45\\Google.Apis.PlatformServices.dll"
+        "C:\\Users\\Yudha\\.nuget\\packages\\google.apis\\1.43.0\\lib\\net45\\Google.Apis.PlatformServices.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\google.apis\\1.43.0\\lib\\net45\\Google.Apis.dll"
       ],
       "Path": "C:\\Users\\Yudha\\.nuget\\packages\\google.apis\\1.43.0"
     },
@@ -1396,8 +1448,8 @@
         "Version": "1.43.0"
       },
       "Assemblies": [
-        "C:\\Users\\Yudha\\.nuget\\packages\\google.apis.auth\\1.43.0\\lib\\net45\\Google.Apis.Auth.dll",
-        "C:\\Users\\Yudha\\.nuget\\packages\\google.apis.auth\\1.43.0\\lib\\net45\\Google.Apis.Auth.PlatformServices.dll"
+        "C:\\Users\\Yudha\\.nuget\\packages\\google.apis.auth\\1.43.0\\lib\\net45\\Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\google.apis.auth\\1.43.0\\lib\\net45\\Google.Apis.Auth.dll"
       ],
       "Path": "C:\\Users\\Yudha\\.nuget\\packages\\google.apis.auth\\1.43.0"
     },
@@ -1732,6 +1784,16 @@
     },
     {
       "Package": {
+        "Id": "Microsoft.Office.Interop.Excel",
+        "Version": "15.0.4795.1000"
+      },
+      "Assemblies": [
+        "C:\\Users\\Yudha\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1000\\lib\\net20\\Microsoft.Office.Interop.Excel.dll"
+      ],
+      "Path": "C:\\Users\\Yudha\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1000"
+    },
+    {
+      "Package": {
         "Id": "Microsoft.Rest.ClientRuntime",
         "Version": "2.3.21"
       },
@@ -1779,6 +1841,16 @@
       },
       "Assemblies": [],
       "Path": "C:\\Users\\Yudha\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.17763.1000"
+    },
+    {
+      "Package": {
+        "Id": "MicrosoftOfficeCore",
+        "Version": "15.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\Yudha\\.nuget\\packages\\microsoftofficecore\\15.0.0\\lib\\net35\\Office.dll"
+      ],
+      "Path": "C:\\Users\\Yudha\\.nuget\\packages\\microsoftofficecore\\15.0.0"
     },
     {
       "Package": {
@@ -1894,10 +1966,10 @@
         "Version": "2.4.1"
       },
       "Assemblies": [
-        "C:\\Users\\Yudha\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OOXML.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OpenXml4Net.dll",
-        "C:\\Users\\Yudha\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OpenXmlFormats.dll"
+        "C:\\Users\\Yudha\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.OpenXmlFormats.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\npoi\\2.4.1\\lib\\net45\\NPOI.dll"
       ],
       "Path": "C:\\Users\\Yudha\\.nuget\\packages\\npoi\\2.4.1"
     },
@@ -2171,8 +2243,8 @@
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.excel.activities\\2.11.4\\lib\\net461\\Microsoft.Vbe.Interop.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.excel.activities\\2.11.4\\lib\\net461\\Office.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.excel.activities\\2.11.4\\lib\\net461\\UiPath.Excel.Activities.Design.dll",
-        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.excel.activities\\2.11.4\\lib\\net461\\UiPath.Excel.Activities.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.excel.activities\\2.11.4\\lib\\net461\\UiPath.Excel.Activities.Package.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.excel.activities\\2.11.4\\lib\\net461\\UiPath.Excel.Activities.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.excel.activities\\2.11.4\\lib\\net461\\UiPath.Excel.dll"
       ],
       "Path": "C:\\Users\\Yudha\\.nuget\\packages\\uipath.excel.activities\\2.11.4"
@@ -2198,8 +2270,8 @@
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\lib\\net461\\Microsoft.Office.Interop.Word.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\lib\\net461\\Office.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\lib\\net461\\UiPath.Mail.Activities.Design.dll",
-        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\lib\\net461\\UiPath.Mail.Activities.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\lib\\net461\\UiPath.Mail.Activities.Package.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\lib\\net461\\UiPath.Mail.Activities.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\lib\\net461\\UiPath.Mail.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.mail.activities\\1.12.2\\lib\\net461\\UiPath.MainSessionServer.Shared.dll"
       ],
@@ -2269,11 +2341,11 @@
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.3\\lib\\net461\\UiPath.CV.Activities.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.3\\lib\\net461\\UiPath.CV.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.3\\lib\\net461\\UiPath.UIAutomation.Activities.Design.dll",
-        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.3\\lib\\net461\\UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.3\\lib\\net461\\UiPath.UIAutomationCore.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.3\\lib\\net461\\UiPath.UIAutomationNext.Activities.Design.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.3\\lib\\net461\\UiPath.UIAutomationNext.Activities.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.3\\lib\\net461\\UiPath.UIAutomationNext.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.3\\lib\\net461\\UiPath.UiAutomation.Activities.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.3\\lib\\net461\\UiPath.Wizards.dll"
       ],
       "Path": "C:\\Users\\Yudha\\.nuget\\packages\\uipath.uiautomation.activities\\21.10.3"
@@ -2286,10 +2358,10 @@
       "Assemblies": [
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.vision\\3.1.4\\lib\\net461\\UiPath.Vision.AzureComputerVision.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.vision\\3.1.4\\lib\\net461\\UiPath.Vision.Core.dll",
-        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.vision\\3.1.4\\lib\\net461\\UiPath.Vision.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.vision\\3.1.4\\lib\\net461\\UiPath.Vision.GoogleCloud.dll",
         "C:\\Users\\Yudha\\.nuget\\packages\\uipath.vision\\3.1.4\\lib\\net461\\UiPath.Vision.Microsoft.dll",
-        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.vision\\3.1.4\\lib\\net461\\UiPath.Vision.Tesseract.dll"
+        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.vision\\3.1.4\\lib\\net461\\UiPath.Vision.Tesseract.dll",
+        "C:\\Users\\Yudha\\.nuget\\packages\\uipath.vision\\3.1.4\\lib\\net461\\UiPath.Vision.dll"
       ],
       "Path": "C:\\Users\\Yudha\\.nuget\\packages\\uipath.vision\\3.1.4"
     }
