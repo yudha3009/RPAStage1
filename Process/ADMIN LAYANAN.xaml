@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1126,9839</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1159,9639</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SPV_QIA_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
@@ -48,7 +48,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="29">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="58">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -78,9 +78,10 @@
       <AssemblyReference>BalaReva.Excel</AssemblyReference>
       <AssemblyReference>BalaReva.Excel.Base</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ADMIN LAYANAN" sap:VirtualizedContainerService.HintSize="528,9774" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ADMIN LAYANAN" sap:VirtualizedContainerService.HintSize="528,8174" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="file" />
       <Variable x:TypeArguments="sd:DataTable" Name="dataTable" />
@@ -292,25 +293,25 @@
       <x:Reference>__ReferenceID0</x:Reference>
       <x:Reference>__ReferenceID1</x:Reference>
     </Flowchart>
-    <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="486,8484" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" WorkbookPath="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;dd-MM-yyyy&quot;)+&quot;.xlsx&quot;]">
+    <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="486,6884" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" WorkbookPath="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;dd-MM-yyyy&quot;)+&quot;.xlsx&quot;]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="452,8375" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="452,6775" sap2010:WorkflowViewState.IdRef="Sequence_11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="410,8221" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="410,6621" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,8102" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,6502" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -332,157 +333,29 @@
                     <ui:ExcelWriteCell Cell="[&quot;W&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_14" SheetName="Template" Text="[CurrentRow.item(&quot;HK REALISASI&quot;).ToString]" />
                     <ui:ExcelWriteCell Cell="[&quot;X&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_15" SheetName="Template" Text="[CurrentRow.item(&quot;HK TUPRES&quot;).ToString]" />
                     <ui:ExcelWriteCell Cell="[&quot;AG&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_16" SheetName="Template" Text="[CurrentRow.item(&quot;KEDISIPLINAN&quot;).ToString]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_6">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[a]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[(Convert.ToInt32(CurrentRow.item("KEDISIPLINAN"))/5*(15/100)*100).ToString]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelWriteCell Cell="[&quot;AH&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_17" SheetName="Template" Text="[a+&quot;%&quot;]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_7">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[b]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[(Convert.ToDouble(a)/(15/100)*(100/100)).ToString]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelWriteCell Cell="[&quot;AI&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_18" SheetName="Template" Text="[b+&quot;%&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;AH&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_17" SheetName="Template" Text="[&quot;=AG$&quot;+count.ToString+&quot;/5*AG$3&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;AI&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_18" SheetName="Template" Text="[&quot;=AH&quot;+count.ToString+&quot;/AG$3*100%&quot;]" />
                     <ui:ExcelWriteCell Cell="[&quot;AJ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_19" SheetName="Template" Text="[CurrentRow.item(&quot;KEHADIRAN&quot;).ToString]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_8">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[a]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[(Convert.ToInt32(CurrentRow.item("KEHADIRAN"))/5*(15/100)*100).ToString]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelWriteCell Cell="[&quot;AK&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_20" SheetName="Template" Text="[a+&quot;%&quot;]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_9">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[b]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[(Convert.ToDouble(a)/(15/100)*(100/100)).ToString]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelWriteCell Cell="[&quot;AL&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_21" SheetName="Template" Text="[b+&quot;%&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;AK&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_20" SheetName="Template" Text="[&quot;=AJ$&quot;+count.ToString+&quot;/5*$AJ$3&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;AL&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_21" SheetName="Template" Text="[&quot;=AK&quot;+count.ToString+&quot;/AJ$3*100%&quot;]" />
                     <ui:ExcelWriteCell Cell="[&quot;HV&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_22" SheetName="Template" Text="[CurrentRow.item(&quot;Ketepatan &amp; keakuratan reporting&quot;).ToString]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_10">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[a]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[(Convert.ToInt32(CurrentRow.item("Ketepatan &amp; keakuratan reporting"))/5*(10/100)*100).ToString]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelWriteCell Cell="[&quot;HW&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_23" SheetName="Template" Text="[a+&quot;%&quot;]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_11">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[b]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[(Convert.ToDouble(a)/(10/100)*(100/100)).ToString]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelWriteCell Cell="[&quot;HX&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_24" SheetName="Template" Text="[b+&quot;%&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;HW&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_23" SheetName="Template" Text="[&quot;=$HV&quot;+count.ToString+&quot;/5*$HV$3&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;HX&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_24" SheetName="Template" Text="[&quot;=HW&quot;+count.ToString+&quot;/$HV$3*100%&quot;]" />
                     <ui:ExcelWriteCell Cell="[&quot;HY&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_25" SheetName="Template" Text="[CurrentRow.item(&quot;Penyelesaian laporan rekapitulasi&quot;).ToString]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_12">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[a]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[(Convert.ToInt32(CurrentRow.item("Penyelesaian laporan rekapitulasi"))/5*(10/100)*100).ToString]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelWriteCell Cell="[&quot;HZ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_26" SheetName="Template" Text="[a+&quot;%&quot;]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_13">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[b]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[(Convert.ToDouble(a)/(10/100)*(100/100)).ToString]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelWriteCell Cell="[&quot;IA&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_27" SheetName="Template" Text="[b+&quot;%&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;HZ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_26" SheetName="Template" Text="[&quot;=$HY&quot;+count.ToString+&quot;/5*$HY$3&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;IA&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_27" SheetName="Template" Text="[&quot;=HZ&quot;+count.ToString+&quot;/$HY$3*100%&quot;]" />
                     <ui:ExcelWriteCell Cell="[&quot;IB&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_28" SheetName="Template" Text="[CurrentRow.item(&quot;Filling/dokumentasi berdasarkan catatan mutu&quot;).ToString]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_14">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[a]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[(Convert.ToInt32(CurrentRow.item("Filling/dokumentasi berdasarkan catatan mutu"))/5*(15/100)*100).ToString]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelWriteCell Cell="[&quot;IC&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_29" SheetName="Template" Text="[a+&quot;%&quot;]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_15">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[b]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[(Convert.ToDouble(a)/(15/100)*(100/100)).ToString]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelWriteCell Cell="[&quot;ID&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_30" SheetName="Template" Text="[b+&quot;%&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;IC&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_29" SheetName="Template" Text="[&quot;=$IB&quot;+count.ToString+&quot;/5*$IB$3&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;ID&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_30" SheetName="Template" Text="[&quot;=IC&quot;+count.ToString+&quot;/$IB$3*100%&quot;]" />
                     <ui:ExcelWriteCell Cell="[&quot;IE&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_31" SheetName="Template" Text="[CurrentRow.item(&quot;Akurasi rekapitulasi data&quot;).ToString]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_16">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[a]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[(Convert.ToInt32(CurrentRow.item("Akurasi rekapitulasi data"))/5*(15/100)*100).ToString]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelWriteCell Cell="[&quot;IF&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_32" SheetName="Template" Text="[a+&quot;%&quot;]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_17">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[b]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[(Convert.ToDouble(a)/(15/100)*(100/100)).ToString]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelWriteCell Cell="[&quot;IG&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_33" SheetName="Template" Text="[b+&quot;%&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;IF&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_32" SheetName="Template" Text="[&quot;=$IE&quot;+count.ToString+&quot;/5*$IE$3&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;IG&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_33" SheetName="Template" Text="[&quot;=IF&quot;+count.ToString+&quot;/$IE$3*100%&quot;]" />
                     <ui:ExcelWriteCell Cell="[&quot;IH&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_34" SheetName="Template" Text="[CurrentRow.item(&quot;Usulan/rekomendasi perbaikan proses kerja administrasi layanan&quot;).ToString]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_18">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[a]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[(Convert.ToInt32(CurrentRow.item("Usulan/rekomendasi perbaikan proses kerja administrasi layanan"))/5*(15/100)*100).ToString]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelWriteCell Cell="[&quot;II&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_35" SheetName="Template" Text="[a+&quot;%&quot;]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_19">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[b]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[(Convert.ToDouble(a)/(15/100)*(100/100)).ToString]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelWriteCell Cell="[&quot;IJ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_36" SheetName="Template" Text="[b+&quot;%&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;II&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_35" SheetName="Template" Text="[&quot;=$IH&quot;+count.ToString+&quot;/5*$IH$3&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;IJ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_36" SheetName="Template" Text="[&quot;=II&quot;+count.ToString+&quot;/$IH$3*100%&quot;]" />
                     <ui:ExcelWriteCell Cell="[&quot;IK&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_37" SheetName="Template" Text="[CurrentRow.item(&quot;Kecepatan eskalasi ke supervisor&quot;).ToString]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_20">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[a]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[(Convert.ToInt32(CurrentRow.item("Kecepatan eskalasi ke supervisor"))/5*(5/100)*100).ToString]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelWriteCell Cell="[&quot;IL&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_38" SheetName="Template" Text="[a+&quot;%&quot;]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_21">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[b]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[(Convert.ToDouble(a)/(5/100)*(100/100)).ToString]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <ui:ExcelWriteCell Cell="[&quot;IM&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_39" SheetName="Template" Text="[b+&quot;%&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;IL&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_38" SheetName="Template" Text="[&quot;=$IK&quot;+count.ToString+&quot;/5*$IK$3&quot;]" />
+                    <ui:ExcelWriteCell Cell="[&quot;IM&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_39" SheetName="Template" Text="[&quot;=IL&quot;+count.ToString+&quot;/$IK$3*100%&quot;]" />
                     <ui:ExcelWriteCell Cell="[&quot;AAP&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_40" SheetName="Template" Text="[&quot;=AH&quot;+count.ToString+&quot;+AK&quot;+count.ToString]" />
                     <ui:ExcelWriteCell Cell="[&quot;AAQ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_41" SheetName="Template" Text="[&quot;=HW&quot;+count.ToString+&quot;+HZ&quot;+count.ToString+&quot;+IC&quot;+count.ToString+&quot;+IF&quot;+count.ToString+&quot;+II&quot;+count.ToString+&quot;+IL&quot;+count.ToString]" />
                     <ui:ExcelWriteCell Cell="[&quot;AAR&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_42" SheetName="Template" Text="[&quot;=AAP&quot;+count.ToString+&quot;+AAQ&quot;+count.ToString]" />

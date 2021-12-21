@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="checkEmail" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="572,515" sap2010:WorkflowViewState.IdRef="checkEmail_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:bes="clr-namespace:BalaReva.Excel.Sheets;assembly=BalaReva.Excel" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="checkEmail" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1159,827" sap2010:WorkflowViewState.IdRef="checkEmail_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:bes="clr-namespace:BalaReva.Excel.Sheets;assembly=BalaReva.Excel" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
       <x:String>System.Activities</x:String>
@@ -109,7 +109,7 @@
             <av:PointCollection x:Key="ConnectorLocation">300,265.5 300,294.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[mailList]">
+        <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="712,952" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[mailList]">
           <ui:ForEach.Body>
             <ActivityAction x:TypeArguments="snm:MailMessage">
               <ActivityAction.Argument>
@@ -164,7 +164,7 @@
                             <av:Size x:Key="ShapeSize">200,66</av:Size>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Sequence-getJabatan" sap:VirtualizedContainerService.HintSize="1017,3106" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <Sequence DisplayName="Sequence-getJabatan" sap:VirtualizedContainerService.HintSize="1413,4356" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="jabatan" />
                             <Variable x:TypeArguments="x:String" Name="subject" />
@@ -172,13 +172,20 @@
                             <Variable x:TypeArguments="x:Boolean" Name="isExists" />
                             <Variable x:TypeArguments="s:String[]" Name="arrayJabatan" />
                             <Variable x:TypeArguments="x:Boolean" Default="False" Name="isCorrectSubject" />
+                            <Variable x:TypeArguments="s:String[]" Name="sheet" />
+                            <Variable x:TypeArguments="ui:WorkbookApplication" Name="Workbook" />
+                            <Variable x:TypeArguments="x:Boolean" Name="sheetExists">
+                              <Variable.Default>
+                                <Literal x:TypeArguments="x:Boolean" />
+                              </Variable.Default>
+                            </Variable>
                           </Sequence.Variables>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign DisplayName="Assign-year" sap:VirtualizedContainerService.HintSize="975,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign DisplayName="Assign-year" sap:VirtualizedContainerService.HintSize="1371,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[year]</OutArgument>
                             </Assign.To>
@@ -191,7 +198,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </Assign>
-                          <Assign sap:VirtualizedContainerService.HintSize="975,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                          <Assign sap:VirtualizedContainerService.HintSize="1371,60" sap2010:WorkflowViewState.IdRef="Assign_4">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[subject]</OutArgument>
                             </Assign.To>
@@ -199,7 +206,7 @@
                               <InArgument x:TypeArguments="x:String">[item.Subject.ToString]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <Assign sap:VirtualizedContainerService.HintSize="975,64" sap2010:WorkflowViewState.IdRef="Assign_5">
+                          <Assign sap:VirtualizedContainerService.HintSize="1371,64" sap2010:WorkflowViewState.IdRef="Assign_5">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
                             </Assign.To>
@@ -210,7 +217,7 @@
 ).ToUpper()]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <Assign DisplayName="Assign-posisi" sap:VirtualizedContainerService.HintSize="975,64" sap2010:WorkflowViewState.IdRef="Assign_3">
+                          <Assign DisplayName="Assign-posisi" sap:VirtualizedContainerService.HintSize="1371,64" sap2010:WorkflowViewState.IdRef="Assign_3">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[jabatan]</OutArgument>
                             </Assign.To>
@@ -221,7 +228,7 @@
 	).toUpper()]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <Assign sap:VirtualizedContainerService.HintSize="975,64" sap2010:WorkflowViewState.IdRef="Assign_7">
+                          <Assign sap:VirtualizedContainerService.HintSize="1371,64" sap2010:WorkflowViewState.IdRef="Assign_7">
                             <Assign.To>
                               <OutArgument x:TypeArguments="s:String[]">[arrayJabatan]</OutArgument>
                             </Assign.To>
@@ -253,7 +260,7 @@
 }]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="975,852" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[arrayJabatan]">
+                          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1371,852" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[arrayJabatan]">
                             <ui:ForEach.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
@@ -277,10 +284,7 @@
                                     <Flowchart.StartNode>
                                       <x:Reference>__ReferenceID1</x:Reference>
                                     </Flowchart.StartNode>
-                                    <FlowDecision x:Name="__ReferenceID1" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
-                                      <FlowDecision.Condition>
-                                        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="subject.ToUpper().Contains(item.ToString)" />
-                                      </FlowDecision.Condition>
+                                    <FlowDecision x:Name="__ReferenceID1" Condition="[subject.ToUpper().Contains(item.ToString)]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -322,18 +326,21 @@
                               </ActivityAction>
                             </ui:ForEach.Body>
                           </ui:ForEach>
-                          <If Condition="[isCorrectSubject]" sap:VirtualizedContainerService.HintSize="975,1610" sap2010:WorkflowViewState.IdRef="If_3">
+                          <If Condition="[isCorrectSubject]" sap:VirtualizedContainerService.HintSize="1371,2860" sap2010:WorkflowViewState.IdRef="If_3">
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="554,1452" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                              <Sequence sap:VirtualizedContainerService.HintSize="950,2702" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="s:String[]" Name="arraySheet" />
+                                </Sequence.Variables>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="512,79" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[&quot;Attachment\&quot;+fileName]" />
-                                <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" FolderPath="Attachment" sap:VirtualizedContainerService.HintSize="512,89" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_2" Message="[item]" OverwriteExisting="False" />
-                                <ui:FileExistsX DisplayName="File Exists" Exists="[isExists]" sap:VirtualizedContainerService.HintSize="512,132" sap2010:WorkflowViewState.IdRef="FileExistsX_2" Path="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;dd-MM-yyyy&quot;)+&quot;.xlsx&quot;]" />
-                                <If Condition="[isExists = False]" sap:VirtualizedContainerService.HintSize="512,678" sap2010:WorkflowViewState.IdRef="If_2">
+                                <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="908,79" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[&quot;Attachment\&quot;+fileName]" />
+                                <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" FolderPath="Attachment" sap:VirtualizedContainerService.HintSize="908,89" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_2" Message="[item]" OverwriteExisting="False" />
+                                <ui:FileExistsX DisplayName="File Exists" Exists="[isExists]" sap:VirtualizedContainerService.HintSize="908,132" sap2010:WorkflowViewState.IdRef="FileExistsX_2" Path="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;dd-MM-yyyy&quot;)+&quot;.xlsx&quot;]" />
+                                <If Condition="[isExists = False]" sap:VirtualizedContainerService.HintSize="908,678" sap2010:WorkflowViewState.IdRef="If_2">
                                   <If.Then>
                                     <Sequence sap:VirtualizedContainerService.HintSize="476,491" sap2010:WorkflowViewState.IdRef="Sequence_16">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -371,15 +378,136 @@
                                     </Sequence>
                                   </If.Else>
                                 </If>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="512,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="[&quot;Process\&quot;+jabatan+&quot;.xaml&quot;]">
-                                  <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:String" x:Key="jabatan">[jabatan]</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="year">[year]</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="month">[month]</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="fileName">[fileName]</InArgument>
-                                  </ui:InvokeWorkflowFile.Arguments>
-                                </ui:InvokeWorkflowFile>
-                                <bes:DeleteSheet ExecutionResult="{x:Null}" FilePassword="{x:Null}" ModifyPassword="{x:Null}" ContinueOnError="False" Delay="3" DisplayName="Delete Sheet" FilePath="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;dd-MM-yyyy&quot;)+&quot;.xlsx&quot;]" sap:VirtualizedContainerService.HintSize="512,70" sap2010:WorkflowViewState.IdRef="DeleteSheet_2" SheetName="Sheet1" />
+                                <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="908,261" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" Workbook="[Workbook]" WorkbookPath="[&quot;Attachment\&quot;+fileName]">
+                                  <ui:ExcelApplicationScope.Body>
+                                    <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="s:String[]">[sheet]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="s:String[]">[Workbook.GetSheets.ToArray]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </ui:ExcelApplicationScope.Body>
+                                </ui:ExcelApplicationScope>
+                                <Assign sap:VirtualizedContainerService.HintSize="908,64" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="s:String[]">[arraySheet]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="s:String[]" xml:space="preserve">[{
+	"SPV QIA",
+	"OPERATION PLAN",
+	"DOCUMENT CONTROL",
+	"HR SUPPORT",
+	"GA",
+	"ADM LO",
+	"ADM OFFICE",
+	"ADM LAYANAN",
+	"SPV IT",
+	"PC Cleaning",
+	"STAFF IT",
+	"TRAINER HARDSKILL",
+	"TL KORNAS",
+	"TL KORLAP",
+	"SPV QCO",
+	"TL QC",
+	"QCO",
+	"SPV CH",
+	"TL CH",
+	"CHO",
+	"SPV",
+	"TL",
+	"AGENT"
+}]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each - Check Sheet" sap:VirtualizedContainerService.HintSize="562,555" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[sheet]">
+                                  <ui:ForEach.Body>
+                                    <ActivityAction x:TypeArguments="x:String">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,431" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <If Condition="[arraySheet.Contains(item.ToString)]" sap:VirtualizedContainerService.HintSize="484,339" sap2010:WorkflowViewState.IdRef="If_4">
+                                          <If.Then>
+                                            <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Boolean">[sheetExists]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                            </Sequence>
+                                          </If.Then>
+                                          <If.Else>
+                                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </Sequence>
+                                          </If.Else>
+                                        </If>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </ui:ForEach.Body>
+                                </ui:ForEach>
+                                <If Condition="[sheetExists]" sap:VirtualizedContainerService.HintSize="908,472" sap2010:WorkflowViewState.IdRef="If_5">
+                                  <If.Then>
+                                    <Sequence sap:VirtualizedContainerService.HintSize="487,314" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="445,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="[&quot;Process\&quot;+jabatan+&quot;.xaml&quot;]">
+                                        <ui:InvokeWorkflowFile.Arguments>
+                                          <InArgument x:TypeArguments="x:String" x:Key="jabatan">[jabatan]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="year">[year]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="month">[month]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="fileName">[fileName]</InArgument>
+                                        </ui:InvokeWorkflowFile.Arguments>
+                                      </ui:InvokeWorkflowFile>
+                                      <bes:DeleteSheet ExecutionResult="{x:Null}" FilePassword="{x:Null}" ModifyPassword="{x:Null}" ContinueOnError="False" Delay="3" DisplayName="Delete Sheet" FilePath="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;dd-MM-yyyy&quot;)+&quot;.xlsx&quot;]" sap:VirtualizedContainerService.HintSize="445,70" sap2010:WorkflowViewState.IdRef="DeleteSheet_2" SheetName="Sheet1" />
+                                    </Sequence>
+                                  </If.Then>
+                                  <If.Else>
+                                    <Sequence sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Nama sheet pada jabatan &quot;+jabatan+&quot; tidak sesuai.&quot;]" />
+                                    </Sequence>
+                                  </If.Else>
+                                </If>
                               </Sequence>
                             </If.Then>
                             <If.Else>
@@ -429,7 +557,7 @@
             <av:PointCollection x:Key="ConnectorLocation">300,161 300,214.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" FilterExpression="{x:Null}" SecurePassword="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="rpacctsel@gmail.com" EnableSSL="True" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_2" MailFolder="Inbox" MarkAsRead="True" Messages="[mailList]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Password="Infomedia1234" Port="993" SecureConnection="Auto" Server="imap.gmail.com" TimeoutMS="999999999" Top="2" />
+        <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" FilterExpression="{x:Null}" SecurePassword="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="rpacctsel@gmail.com" EnableSSL="True" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_2" MailFolder="Inbox" MarkAsRead="False" Messages="[mailList]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Password="Infomedia1234" Port="993" SecureConnection="Auto" Server="imap.gmail.com" TimeoutMS="999999999" Top="1" />
         <FlowStep.Next>
           <x:Reference>__ReferenceID4</x:Reference>
         </FlowStep.Next>
