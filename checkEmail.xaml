@@ -75,7 +75,12 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="checkEmail" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="checkEmail" sap:VirtualizedContainerService.HintSize="676,728" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -104,13 +109,13 @@
             <av:PointCollection x:Key="ConnectorLocation">300,265.5 300,294.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,367" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[mailList]">
+        <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[mailList]">
           <ui:ForEach.Body>
             <ActivityAction x:TypeArguments="snm:MailMessage">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="item" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,243" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="676,828" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Name="fileName" />
                 </Sequence.Variables>
@@ -119,7 +124,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign sap:VirtualizedContainerService.HintSize="634,60" sap2010:WorkflowViewState.IdRef="Assign_6">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[fileName]</OutArgument>
                   </Assign.To>
@@ -159,7 +164,7 @@
                             <av:Size x:Key="ShapeSize">200,66</av:Size>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Sequence-getJabatan" sap:VirtualizedContainerService.HintSize="1017,2521" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <Sequence DisplayName="Sequence-getJabatan" sap:VirtualizedContainerService.HintSize="1017,3106" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="jabatan" />
                             <Variable x:TypeArguments="x:String" Name="subject" />
@@ -248,19 +253,19 @@
 }]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="975,267" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[arrayJabatan]">
+                          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="975,852" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[arrayJabatan]">
                             <ui:ForEach.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="676,728" sap2010:WorkflowViewState.IdRef="Sequence_12">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Flowchart sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+                                  <Flowchart sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_4">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -272,7 +277,10 @@
                                     <Flowchart.StartNode>
                                       <x:Reference>__ReferenceID1</x:Reference>
                                     </Flowchart.StartNode>
-                                    <FlowDecision x:Name="__ReferenceID1" Condition="[subject.Contains(item.ToString)]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                                    <FlowDecision x:Name="__ReferenceID1" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                                      <FlowDecision.Condition>
+                                        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="subject.ToUpper().Contains(item.ToString)" />
+                                      </FlowDecision.Condition>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -421,7 +429,7 @@
             <av:PointCollection x:Key="ConnectorLocation">300,161 300,214.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" FilterExpression="{x:Null}" SecurePassword="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="rpacctsel@gmail.com" EnableSSL="True" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_2" MailFolder="Inbox" MarkAsRead="False" Messages="[mailList]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Password="Infomedia1234" Port="993" SecureConnection="Auto" Server="imap.gmail.com" TimeoutMS="999999999" Top="1" />
+        <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" FilterExpression="{x:Null}" SecurePassword="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="rpacctsel@gmail.com" EnableSSL="True" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_2" MailFolder="Inbox" MarkAsRead="True" Messages="[mailList]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Password="Infomedia1234" Port="993" SecureConnection="Auto" Server="imap.gmail.com" TimeoutMS="999999999" Top="2" />
         <FlowStep.Next>
           <x:Reference>__ReferenceID4</x:Reference>
         </FlowStep.Next>
