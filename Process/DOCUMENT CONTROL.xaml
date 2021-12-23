@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1159,12231</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>981,10453</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SPV_QIA_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
@@ -82,22 +82,14 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DOCUMENT CONTROL" sap:VirtualizedContainerService.HintSize="991,10325" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DOCUMENT CONTROL" sap:VirtualizedContainerService.HintSize="991,10388" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="file" />
       <Variable x:TypeArguments="sd:DataTable" Name="dataTable" />
       <Variable x:TypeArguments="x:Boolean" Name="isExists" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="count" />
-      <Variable x:TypeArguments="x:Int32" Name="totalColumn">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:Boolean" Name="_break">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="totalColumn" />
+      <Variable x:TypeArguments="x:Boolean" Default="False" Name="_break" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -113,13 +105,13 @@
         <InArgument x:TypeArguments="x:String">[fileName]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="949,1835" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="[&quot;Attachment\&quot;+file]">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="949,1898" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="[&quot;Attachment\&quot;+file]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="843,1726" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="843,1789" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="rangeDt" />
               <Variable x:TypeArguments="x:String" Name="randomColumn1" />
@@ -147,50 +139,54 @@
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
             <ui:ExcelReadRange AddHeaders="False" DataTable="[rangeDt]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="801,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="C11" SheetName="DOCUMENT CONTROL" />
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[rangeDt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="801,1238" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[rangeDt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="801,1301" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="767,1119" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="767,1182" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[totalColumn = 0]" sap:VirtualizedContainerService.HintSize="725,553" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If Condition="[totalColumn = 0]" sap:VirtualizedContainerService.HintSize="725,616" sap2010:WorkflowViewState.IdRef="If_2">
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="476,367" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                        <Sequence sap:VirtualizedContainerService.HintSize="526,430" sap2010:WorkflowViewState.IdRef="Sequence_13">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,275" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[CurrentRow.ItemArray]">
-                            <ui:ForEach.Body>
-                              <ActivityAction x:TypeArguments="x:Object">
-                                <ActivityAction.Argument>
-                                  <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
-                                </ActivityAction.Argument>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_15">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_27">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:Int32">[totalColumn]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:Int32">[totalColumn+1]</InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                </Sequence>
-                              </ActivityAction>
-                            </ui:ForEach.Body>
-                          </ui:ForEach>
+                          <If Condition="[totalColumn = 0]" sap:VirtualizedContainerService.HintSize="484,338" sap2010:WorkflowViewState.IdRef="If_6">
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_54">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[totalColumn]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[rangeDt.Columns.Count]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </If.Else>
+                          </If>
                         </Sequence>
                       </If.Then>
                       <If.Else>
@@ -203,7 +199,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <If Condition="[totalColumn = 61 AND randomColumn1 = &quot;Monitoring Implementasi Dokumentasi SMM&quot; AND randomColumn2 = &quot;Jumlah dan waktu revisi dikumen SMM (FASILITATOR)&quot; AND randomColumn3 = &quot;Kecepatan eskalasi ke DC Pusat&quot;]" sap:VirtualizedContainerService.HintSize="725,434" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If Condition="[totalColumn = 61 And &#xD;&#xA;randomColumn1 = &quot;Monitoring Implementasi Dokumentasi SMM&quot; And &#xD;&#xA;randomColumn2 = &quot;Jumlah dan waktu revisi dikumen SMM (FASILITATOR)&quot; And &#xD;&#xA;randomColumn3 = &quot;Kecepatan eskalasi ke DC Pusat&quot;]" sap:VirtualizedContainerService.HintSize="725,434" sap2010:WorkflowViewState.IdRef="If_3">
                       <If.Then>
                         <Sequence sap:VirtualizedContainerService.HintSize="376,277" sap2010:WorkflowViewState.IdRef="Sequence_16">
                           <sap:WorkflowViewStateService.ViewState>
