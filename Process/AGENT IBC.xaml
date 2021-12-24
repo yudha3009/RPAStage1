@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1456,14116</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1444,13718</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SPV_QIA_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -49,7 +49,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="30">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="60">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -80,9 +80,10 @@
       <AssemblyReference>BalaReva.Excel.Base</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AGENT IBC" sap:VirtualizedContainerService.HintSize="1466,14051" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AGENT IBC" sap:VirtualizedContainerService.HintSize="1454,14251" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="file" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="count" />
@@ -91,24 +92,17 @@
       <Variable x:TypeArguments="sd:DataTable" Name="dataTable" />
       <Variable x:TypeArguments="x:Boolean" Name="isExists" />
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="isPriority" />
-      <Variable x:TypeArguments="x:Int32" Name="totalColumn">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:Boolean" Name="_break">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Default="False" Name="_break" />
+      <Variable x:TypeArguments="x:String" Name="checkJabatan" />
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="totalColumn" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BuildDataTable DataTable="[dataTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1424,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;No&quot; msdata:Caption=&quot;&quot; default=&quot;=ROW()-4&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;perner&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;nama&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xA;                &lt;xs:element name=&quot;jabatan&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xA;                &lt;xs:element name=&quot;STATUS_x0020_CUMIL&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;STATUS_x0020_RESIGN&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Pola_x0020_Layanan&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;HK_x0020_Roster&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;S&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;A&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CDK&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CT&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;OP&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;HK_x0020_REALISASI&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;HK_x0020_TUPRES&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;JAM_x0020_EFFECTIVE&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Relisasi_x0020__x0028_Ketepatan_x0020_Waktu_x0020_Login_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_Kehadiran_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_Effective_x0020_Time_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_AHT_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_QA_x0020_Score_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_CES_x0020_Score_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_Pengetahuan_x0020_Produk_x0020__x0026__x0020_Prosedur_x0020_Test_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020_FCR_x0020_Score&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_TnPS_x0020__x0020_Score_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_ACD_x0020_Valid_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_Upgrade_x0020_Knowledge_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;konseling&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BATL&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;SP&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Nominal_x0020_Kinerja&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;nc_tiket&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <Assign sap:VirtualizedContainerService.HintSize="1424,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:BuildDataTable DataTable="[dataTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1412,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;No&quot; msdata:Caption=&quot;&quot; default=&quot;=ROW()-4&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;perner&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;nama&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xA;                &lt;xs:element name=&quot;jabatan&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; /&gt;&#xA;                &lt;xs:element name=&quot;STATUS_x0020_CUMIL&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;STATUS_x0020_RESIGN&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Pola_x0020_Layanan&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;HK_x0020_Roster&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;S&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;A&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CDK&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CT&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;OP&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;HK_x0020_REALISASI&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;HK_x0020_TUPRES&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;JAM_x0020_EFFECTIVE&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Relisasi_x0020__x0028_Ketepatan_x0020_Waktu_x0020_Login_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_Kehadiran_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_Effective_x0020_Time_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_AHT_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_QA_x0020_Score_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_CES_x0020_Score_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_Pengetahuan_x0020_Produk_x0020__x0026__x0020_Prosedur_x0020_Test_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020_FCR_x0020_Score&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_TnPS_x0020__x0020_Score_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_ACD_x0020_Valid_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Realisasi_x0020__x0028_Upgrade_x0020_Knowledge_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;konseling&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BATL&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;SP&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Nominal_x0020_Kinerja&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;nc_tiket&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <Assign sap:VirtualizedContainerService.HintSize="1412,60" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[file]</OutArgument>
       </Assign.To>
@@ -116,13 +110,13 @@
         <InArgument x:TypeArguments="x:String">[fileName]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1424,1898" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[&quot;Attachment\&quot;+file]">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1412,2247" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[&quot;Attachment\&quot;+file]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="993,1789" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1240,2138" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="rangeDt" />
               <Variable x:TypeArguments="x:String" Name="randomColumn1" />
@@ -134,35 +128,35 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelReadCell Cell="AC8" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="951,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_1" SheetName="AGENT">
+            <ui:ExcelReadCell Cell="AC8" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="1198,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_1" SheetName="AGENT">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="x:String">[randomColumn1]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <ui:ExcelReadCell Cell="AP8" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="951,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_2" SheetName="AGENT">
+            <ui:ExcelReadCell Cell="AP8" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="1198,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_2" SheetName="AGENT">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="x:String">[randomColumn2]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <ui:ExcelReadCell Cell="BK8" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="951,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_3" SheetName="AGENT">
+            <ui:ExcelReadCell Cell="BK8" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="1198,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_3" SheetName="AGENT">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="x:String">[randomColumn3]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <ui:ExcelReadRange AddHeaders="False" DataTable="[rangeDt]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="951,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="B11" SheetName="AGENT" />
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[rangeDt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="951,1301" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ExcelReadRange AddHeaders="False" DataTable="[rangeDt]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1198,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="B11" SheetName="AGENT" />
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[rangeDt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1198,1650" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="917,1182" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1164,1531" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If Condition="[totalColumn = 0]" sap:VirtualizedContainerService.HintSize="875,338" sap2010:WorkflowViewState.IdRef="If_8">
+                    <If Condition="[totalColumn = 0]" sap:VirtualizedContainerService.HintSize="1122,338" sap2010:WorkflowViewState.IdRef="If_8">
                       <If.Then>
                         <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_28">
                           <sap:WorkflowViewStateService.ViewState>
@@ -190,26 +184,59 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <If Condition="[totalColumn = 93 And &#xD;&#xA;randomColumn1 = &quot;Kehadiran&quot; And &#xD;&#xA;randomColumn2 = &quot;QA SCORE&quot; And &#xD;&#xA;randomColumn3 = &quot;ACD Valid&quot;]" sap:VirtualizedContainerService.HintSize="875,712" sap2010:WorkflowViewState.IdRef="If_9">
+                    <If Condition="[totalColumn = 93 And &#xA;randomColumn1 = &quot;Kehadiran&quot; And &#xA;randomColumn2 = &quot;QA SCORE&quot; And &#xA;randomColumn3 = &quot;ACD Valid&quot;]" sap:VirtualizedContainerService.HintSize="1122,1061" sap2010:WorkflowViewState.IdRef="If_9">
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="526,555" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                        <Sequence sap:VirtualizedContainerService.HintSize="773,904" sap2010:WorkflowViewState.IdRef="Sequence_30">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <If Condition="[CurrentRow.item(0).ToString &lt;&gt; &quot;&quot; AND CurrentRow.Item(0).ToString &lt;&gt; Nothing AND CurrentRow.Item(0).ToString &lt;&gt; &quot;NAMA AGENT PRIORITY&quot;]" sap:VirtualizedContainerService.HintSize="484,463" sap2010:WorkflowViewState.IdRef="If_3">
+                          <If Condition="[CurrentRow.item(0).ToString &lt;&gt; &quot;&quot; AND CurrentRow.Item(0).ToString &lt;&gt; Nothing AND CurrentRow.Item(0).ToString &lt;&gt; &quot;NAMA AGENT PRIORITY&quot;]" sap:VirtualizedContainerService.HintSize="731,812" sap2010:WorkflowViewState.IdRef="If_3">
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="376,277" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                                <Sequence.Variables>
-                                  <Variable x:TypeArguments="x:Int32" Default="0" Name="totalColumn" />
-                                </Sequence.Variables>
+                              <Sequence sap:VirtualizedContainerService.HintSize="695,626" sap2010:WorkflowViewState.IdRef="Sequence_16">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&#xA;&#x9;&quot;=ROW()-4&quot;,&#xA;&#x9;CurrentRow.Item(1),&#xA;&#x9;CurrentRow.Item(0).ToString,&#xA;&#x9;CurrentRow.Item(5),&#xA;&#x9;CurrentRow.Item(10),&#xA;&#x9;CurrentRow.Item(11),&#xA;&#x9;CurrentRow.Item(12),&#xA;&#x9;CurrentRow.Item(13),&#xA;&#x9;CurrentRow.Item(14),&#xA;&#x9;CurrentRow.Item(15),&#xA;&#x9;CurrentRow.Item(16),&#xA;&#x9;CurrentRow.Item(17),&#xA;&#x9;CurrentRow.Item(18),&#xA;&#x9;CurrentRow.Item(20),&#xA;&#x9;CurrentRow.Item(21),&#xA;&#x9;CurrentRow.Item(22),&#xA;&#x9;CurrentRow.Item(23),&#xA;&#x9;CurrentRow.Item(27),&#xA;&#x9;CurrentRow.Item(32),&#xA;&#x9;CurrentRow.Item(37),&#xA;&#x9;CurrentRow.Item(41),&#xA;&#x9;CurrentRow.Item(45),&#xA;&#x9;CurrentRow.Item(49),&#xA;&#x9;CurrentRow.Item(53),&#xA;&#x9;CurrentRow.Item(58),&#xA;&#x9;CurrentRow.Item(62),&#xA;&#x9;CurrentRow.Item(65),&#xA;&#x9;CurrentRow.Item(75),&#xA;&#x9;CurrentRow.Item(76),&#xA;&#x9;CurrentRow.Item(77),&#xA;&#x9;CurrentRow.Item(73),&#xA;&#x9;CurrentRow.Item(54)&#xA;}]" DataTable="[dataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                                <If Condition="[CurrentRow.Item(5).ToString = &quot;AGENT PRIORITY&quot;]" sap:VirtualizedContainerService.HintSize="653,309" sap2010:WorkflowViewState.IdRef="If_11">
+                                  <If.Then>
+                                    <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[checkJabatan]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">AGENT IBC CC TELKOMSEL PRIORITY</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </If.Then>
+                                  <If.Else>
+                                    <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[checkJabatan]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">AGENT IBC CC TELKOMSEL</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </If.Else>
+                                </If>
+                                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{&#xA;&#x9;&quot;=ROW()-4&quot;,&#xA;&#x9;CurrentRow.Item(1),&#xA;&#x9;CurrentRow.Item(0).ToString,&#xA;&#x9;checkJabatan,&#xA;&#x9;CurrentRow.Item(10),&#xA;&#x9;CurrentRow.Item(11),&#xA;&#x9;CurrentRow.Item(12),&#xA;&#x9;CurrentRow.Item(13),&#xA;&#x9;CurrentRow.Item(14),&#xA;&#x9;CurrentRow.Item(15),&#xA;&#x9;CurrentRow.Item(16),&#xA;&#x9;CurrentRow.Item(17),&#xA;&#x9;CurrentRow.Item(18),&#xA;&#x9;CurrentRow.Item(20),&#xA;&#x9;CurrentRow.Item(21),&#xA;&#x9;CurrentRow.Item(22),&#xA;&#x9;CurrentRow.Item(23),&#xA;&#x9;CurrentRow.Item(27),&#xA;&#x9;CurrentRow.Item(32),&#xA;&#x9;CurrentRow.Item(37),&#xA;&#x9;CurrentRow.Item(41),&#xA;&#x9;CurrentRow.Item(45),&#xA;&#x9;CurrentRow.Item(49),&#xA;&#x9;CurrentRow.Item(53),&#xA;&#x9;CurrentRow.Item(58),&#xA;&#x9;CurrentRow.Item(62),&#xA;&#x9;CurrentRow.Item(65),&#xA;&#x9;CurrentRow.Item(75),&#xA;&#x9;CurrentRow.Item(76),&#xA;&#x9;CurrentRow.Item(77),&#xA;&#x9;CurrentRow.Item(73),&#xA;&#x9;CurrentRow.Item(54)&#xA;}]" DataTable="[dataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="653,185" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                               </Sequence>
                             </If.Then>
                             <If.Else>
@@ -251,9 +278,9 @@
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <If Condition="[_break = False]" sap:VirtualizedContainerService.HintSize="1424,11822" sap2010:WorkflowViewState.IdRef="If_10">
+    <If Condition="[_break = False]" sap:VirtualizedContainerService.HintSize="1412,11673" sap2010:WorkflowViewState.IdRef="If_10">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="991,11664" sap2010:WorkflowViewState.IdRef="Sequence_32">
+        <Sequence sap:VirtualizedContainerService.HintSize="991,11515" sap2010:WorkflowViewState.IdRef="Sequence_32">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -299,13 +326,13 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="729,923" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;dd-MM-yyyy&quot;)+&quot;.xlsx&quot;]">
+                    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="729,920" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;dd-MM-yyyy&quot;)+&quot;.xlsx&quot;]">
                       <ui:ExcelApplicationScope.Body>
                         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="695,814" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="695,811" sap2010:WorkflowViewState.IdRef="Sequence_8">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="sd:DataTable" Name="range" />
                             </Sequence.Variables>
@@ -315,7 +342,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <ui:ExcelReadRange AddHeaders="False" DataTable="[range]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="653,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A5" SheetName="Template" />
-                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[range]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="653,272" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[range]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="653,271" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                               <ui:ForEachRow.Body>
                                 <ActivityAction x:TypeArguments="sd:DataRow">
                                   <ActivityAction.Argument>
@@ -339,7 +366,7 @@
                                 </ActivityAction>
                               </ui:ForEachRow.Body>
                             </ui:ForEachRow>
-                            <If Condition="[count = 0]" sap:VirtualizedContainerService.HintSize="653,311" sap2010:WorkflowViewState.IdRef="If_1">
+                            <If Condition="[count = 0]" sap:VirtualizedContainerService.HintSize="653,309" sap2010:WorkflowViewState.IdRef="If_1">
                               <If.Then>
                                 <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -412,30 +439,66 @@
             <x:Reference>__ReferenceID0</x:Reference>
             <x:Reference>__ReferenceID1</x:Reference>
           </Flowchart>
-          <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="949,11309" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;dd-MM-yyyy&quot;)+&quot;.xlsx&quot;]">
+          <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="949,11160" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;dd-MM-yyyy&quot;)+&quot;.xlsx&quot;]">
             <ui:ExcelApplicationScope.Body>
               <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="915,11200" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="915,11051" sap2010:WorkflowViewState.IdRef="Sequence_18">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="873,11046" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="873,10897" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="839,10927" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="839,10778" sap2010:WorkflowViewState.IdRef="Sequence_19">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
+                          <If Condition="[CurrentRow.item(&quot;jabatan&quot;).ToString = &quot;AGENT IBC CC TELKOMSEL PRIORITY&quot;]" sap:VirtualizedContainerService.HintSize="797,309" sap2010:WorkflowViewState.IdRef="If_12">
+                            <If.Then>
+                              <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Boolean">[isPriority]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Boolean">[isPriority]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </If.Else>
+                          </If>
                           <ui:ExcelWriteCell Cell="[&quot;A&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="Template" Text="[CurrentRow.item(&quot;No&quot;).ToString]" />
                           <ui:ExcelWriteCell Cell="[&quot;B&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Template" Text="[CurrentRow.item(&quot;perner&quot;).ToString]" />
                           <ui:ExcelWriteCell Cell="[&quot;C&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="Template" Text="[CurrentRow.item(&quot;nama&quot;).ToString]" />
@@ -452,7 +515,7 @@
                           <ui:ExcelWriteCell Cell="[&quot;V&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_14" SheetName="Template" Text="[&quot;=SUM(Q&quot;+count.ToString+&quot;:S&quot;+count.ToString+&quot;)&quot;]" />
                           <ui:ExcelWriteCell Cell="[&quot;W&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_15" SheetName="Template" Text="[CurrentRow.item(&quot;HK REALISASI&quot;).ToString]" />
                           <ui:ExcelWriteCell Cell="[&quot;X&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_16" SheetName="Template" Text="[CurrentRow.item(&quot;HK TUPRES&quot;).ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;Y&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_17" SheetName="Template" Text="[CurrentRow.item(&quot;JAM EFFECTIVE&quot;).ToString]" />
+                          <ui:ExcelWriteCell Cell="[&quot;Y&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_17" SheetName="Template" Text="7,75" />
                           <ui:ExcelWriteCell Cell="[&quot;BQ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_18" SheetName="Template" Text="[CurrentRow.item(&quot;Relisasi (Ketepatan Waktu Login)&quot;).ToString]" />
                           <ui:ExcelWriteCell Cell="[&quot;BR&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_19" SheetName="Template" Text="[&quot;=(W&quot;+count.ToString+&quot;-BQ&quot;+count.ToString+&quot;)/W&quot;+count.ToString]" />
                           <ui:ExcelWriteCell Cell="[&quot;BS&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_20" SheetName="Template" Text="[&quot;=IF(R&quot;+count.ToString+&quot;&gt;0,0,IF(BQ&quot;+count.ToString+&quot;&gt;2,0,IF(BQ&quot;+count.ToString+&quot;=2,1,IF(BQ&quot;+count.ToString+&quot;=1,2,IF(BQ&quot;+count.ToString+&quot;&lt;=0,5)))))&quot;]" />
@@ -470,133 +533,114 @@
                           <ui:ExcelWriteCell Cell="[&quot;CE&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_32" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (AHT)&quot;).ToString]" />
                           <ui:ExcelWriteCell Cell="[&quot;CF&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_33" SheetName="Template" Text="[&quot;=IF(CD&quot;+count.ToString+&quot;&gt;CE&quot;+count.ToString+&quot;,5,IF(CE&quot;+count.ToString+&quot;=CD&quot;+count.ToString+&quot;,3,1))&quot;]" />
                           <ui:ExcelWriteCell Cell="[&quot;CG&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_34" SheetName="Template" Text="[&quot;=CF&quot;+count.ToString+&quot;*$CD$3/5&quot;]" />
-                          <If Condition="[isPriority]" sap:VirtualizedContainerService.HintSize="797,336" sap2010:WorkflowViewState.IdRef="If_4">
+                          <If Condition="[isPriority]" sap:VirtualizedContainerService.HintSize="797,2876" sap2010:WorkflowViewState.IdRef="If_4">
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,2719" sap2010:WorkflowViewState.IdRef="Sequence_20">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:ExcelWriteCell Cell="[&quot;MX&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_35" SheetName="Template" Text="100" />
+                                <ui:ExcelWriteCell Cell="[&quot;NS&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_35" SheetName="Template" Text="100" />
+                                <ui:ExcelWriteCell Cell="[&quot;NT&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_82" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (QA Score)&quot;).ToString]" />
+                                <ui:ExcelWriteCell Cell="[&quot;NU&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_83" SheetName="Template" Text="[&quot;=IF(NT&quot;+count.ToString+&quot;=NS&quot;+count.ToString+&quot;,5,IF(NT&quot;+count.ToString+&quot;&gt;=98,3,1))&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;NV&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_84" SheetName="Template" Text="[&quot;=NU&quot;+count.ToString+&quot;*$NS$3/5&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;NW&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_85" SheetName="Template" Text="100%" />
+                                <ui:ExcelWriteCell Cell="[&quot;NX&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_86" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (CES Score)&quot;).ToString]" />
+                                <ui:ExcelWriteCell Cell="[&quot;NY&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_87" SheetName="Template" Text="[&quot;=IF(NX&quot;+count.ToString+&quot;=NW&quot;+count.ToString+&quot;,5,IF(NX&quot;+count.ToString+&quot;&gt;=98%,3,1))&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;NZ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_88" SheetName="Template" Text="[&quot;=NY&quot;+count.ToString+&quot;*$NW$3/5&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;OA&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_89" SheetName="Template" Text="100" />
+                                <ui:ExcelWriteCell Cell="[&quot;OB&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_90" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (Pengetahuan Produk &amp; Prosedur Test)&quot;).ToString]" />
+                                <ui:ExcelWriteCell Cell="[&quot;OC&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_91" SheetName="Template" Text="[&quot;=IF(OB&quot;+count.ToString+&quot;=OA&quot;+count.ToString+&quot;,5,IF(OB&quot;+count.ToString+&quot;&gt;=98,3,1))&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;OD&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_92" SheetName="Template" Text="[&quot;=OC&quot;+count.ToString+&quot;*$OA$3/5&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;OE&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_93" SheetName="Template" Text="100%" />
+                                <ui:ExcelWriteCell Cell="[&quot;OF&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_94" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi FCR Score&quot;).ToString]" />
+                                <ui:ExcelWriteCell Cell="[&quot;OG&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_95" SheetName="Template" Text="[CurrentRow.item(&quot;nc_tiket&quot;).ToString]" />
+                                <ui:ExcelWriteCell Cell="[&quot;OH&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_96" SheetName="Template" Text="[&quot;=IF(OG&quot;+count.ToString+&quot;=1,0,IF(OF&quot;+count.ToString+&quot;=100%,5,IF(AND(OF&quot;+count.ToString+&quot;&gt;=85%,OF&quot;+count.ToString+&quot;&lt;100%),4,IF(OF&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;&quot;&quot;&quot;+&quot;,3,1))))&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;OI&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_97" SheetName="Template" Text="[&quot;=OH&quot;+count.ToString+&quot;*$OE$3/5&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;OJ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_98" SheetName="Template" Text="40%" />
+                                <ui:ExcelWriteCell Cell="[&quot;OK&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_99" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (TnPS  Score)&quot;).ToString]" />
+                                <ui:ExcelWriteCell Cell="[&quot;OL&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_100" SheetName="Template" Text="[&quot;=IF(OK&quot;+count.ToString+&quot;=100%,5,IF(OK&quot;+count.ToString+&quot;&gt;=OJ&quot;+count.ToString+&quot;,4,IF(OK&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;&quot;&quot;&quot;+&quot;,3,1)))&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;OM&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_101" SheetName="Template" Text="[&quot;=OL&quot;+count.ToString+&quot;*$OJ$3/5&quot;]" />
                               </Sequence>
                             </If.Then>
                             <If.Else>
-                              <Sequence sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,2719" sap2010:WorkflowViewState.IdRef="Sequence_21">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <ui:ExcelWriteCell Cell="[&quot;MX&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_36" SheetName="Template" Text="95" />
-                              </Sequence>
-                            </If.Else>
-                          </If>
-                          <ui:ExcelWriteCell Cell="[&quot;MY&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_37" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (QA Score)&quot;).ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;MZ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_38" SheetName="Template" Text="[&quot;=IF(MY&quot;+count.ToString+&quot;&gt;MX&quot;+count.ToString+&quot;,5,IF(MY&quot;+count.ToString+&quot;=MX&quot;+count.ToString+&quot;,3,1))&quot;]" />
-                          <ui:ExcelWriteCell Cell="[&quot;NA&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_39" SheetName="Template" Text="[&quot;=MZ&quot;+count.ToString+&quot;*$MX$3/5&quot;]" />
-                          <If Condition="[isPriority]" sap:VirtualizedContainerService.HintSize="797,336" sap2010:WorkflowViewState.IdRef="If_5">
-                            <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_22">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ui:ExcelWriteCell Cell="[&quot;NB&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_40" SheetName="Template" Text="100%" />
-                              </Sequence>
-                            </If.Then>
-                            <If.Else>
-                              <Sequence sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_23">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ExcelWriteCell Cell="[&quot;MY&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_37" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (QA Score)&quot;).ToString]" />
+                                <ui:ExcelWriteCell Cell="[&quot;MZ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_38" SheetName="Template" Text="[&quot;=IF(MY&quot;+count.ToString+&quot;&gt;MX&quot;+count.ToString+&quot;,5,IF(MY&quot;+count.ToString+&quot;=MX&quot;+count.ToString+&quot;,3,1))&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;NA&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_39" SheetName="Template" Text="[&quot;=MZ&quot;+count.ToString+&quot;*$MX$3/5&quot;]" />
                                 <ui:ExcelWriteCell Cell="[&quot;NB&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_41" SheetName="Template" Text="92%" />
-                              </Sequence>
-                            </If.Else>
-                          </If>
-                          <ui:ExcelWriteCell Cell="[&quot;NC&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_42" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (CES Score)&quot;).ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ND&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_43" SheetName="Template" Text="[&quot;=IF(NC&quot;+count.ToString+&quot;&gt;NB&quot;+count.ToString+&quot;,5,IF(NC&quot;+count.ToString+&quot;=NB&quot;+count.ToString+&quot;,3,1))&quot;]" />
-                          <ui:ExcelWriteCell Cell="[&quot;NE&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_44" SheetName="Template" Text="[&quot;=ND&quot;+count.ToString+&quot;*$NB$3/5&quot;]" />
-                          <If Condition="[isPriority]" sap:VirtualizedContainerService.HintSize="797,336" sap2010:WorkflowViewState.IdRef="If_6">
-                            <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_24">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ui:ExcelWriteCell Cell="[&quot;NF&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_45" SheetName="Template" Text="100" />
-                              </Sequence>
-                            </If.Then>
-                            <If.Else>
-                              <Sequence sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_25">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ExcelWriteCell Cell="[&quot;NC&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_42" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (CES Score)&quot;).ToString]" />
+                                <ui:ExcelWriteCell Cell="[&quot;ND&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_43" SheetName="Template" Text="[&quot;=IF(NC&quot;+count.ToString+&quot;&gt;NB&quot;+count.ToString+&quot;,5,IF(NC&quot;+count.ToString+&quot;=NB&quot;+count.ToString+&quot;,3,1))&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;NE&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_44" SheetName="Template" Text="[&quot;=ND&quot;+count.ToString+&quot;*$NB$3/5&quot;]" />
                                 <ui:ExcelWriteCell Cell="[&quot;NF&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_46" SheetName="Template" Text="90" />
+                                <ui:ExcelWriteCell Cell="[&quot;NG&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_47" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (Pengetahuan Produk &amp; Prosedur Test)&quot;).ToString]" />
+                                <ui:ExcelWriteCell Cell="[&quot;NH&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_48" SheetName="Template" Text="[&quot;=IF(NG&quot;+count.ToString+&quot;&gt;NF&quot;+count.ToString+&quot;,5,IF(NG&quot;+count.ToString+&quot;=NF&quot;+count.ToString+&quot;,3,1))&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;NI&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_49" SheetName="Template" Text="[&quot;=NH&quot;+count.ToString+&quot;*$NF$3/5&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;NJ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_51" SheetName="Template" Text="85%" />
+                                <ui:ExcelWriteCell Cell="[&quot;NK&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_52" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi FCR Score&quot;).ToString]" />
+                                <ui:ExcelWriteCell Cell="[&quot;NL&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_53" SheetName="Template" Text="[CurrentRow.item(&quot;nc_tiket&quot;).ToString]" />
+                                <ui:ExcelWriteCell Cell="[&quot;NM&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_54" SheetName="Template" Text="[&quot;=IF(NL&quot;+count.ToString+&quot;=1,0,IF(NK&quot;+count.ToString+&quot;&gt;NJ&quot;+count.ToString+&quot;,5,IF(NK&quot;+count.ToString+&quot;=NK&quot;+count.ToString+&quot;,4,IF(NK&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;&quot;&quot;&quot;+&quot;,3,1))))&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;NN&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_55" SheetName="Template" Text="[&quot;=NM&quot;+count.ToString+&quot;*$NJ$3/5&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;NO&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_56" SheetName="Template" Text="40%" />
+                                <ui:ExcelWriteCell Cell="[&quot;NP&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_57" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (TnPS  Score)&quot;).ToString]" />
+                                <ui:ExcelWriteCell Cell="[&quot;NQ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_58" SheetName="Template" Text="[&quot;=IF(NP&quot;+count.ToString+&quot;&gt;NO&quot;+count.ToString+&quot;,5,IF(NP&quot;+count.ToString+&quot;=NO&quot;+count.ToString+&quot;,4,IF(NP&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;&quot;&quot;&quot;+&quot;,3,1)))&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;NR&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_59" SheetName="Template" Text="[&quot;=NQ&quot;+count.ToString+&quot;*$NO$3/5&quot;]" />
                               </Sequence>
                             </If.Else>
                           </If>
-                          <ui:ExcelWriteCell Cell="[&quot;NG&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_47" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (Pengetahuan Produk &amp; Prosedur Test)&quot;).ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;NH&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_48" SheetName="Template" Text="[&quot;=IF(NG&quot;+count.ToString+&quot;&gt;NF&quot;+count.ToString+&quot;,5,IF(NG&quot;+count.ToString+&quot;=NF&quot;+count.ToString+&quot;,3,1))&quot;]" />
-                          <ui:ExcelWriteCell Cell="[&quot;NI&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_49" SheetName="Template" Text="[&quot;=NH&quot;+count.ToString+&quot;*$NF$3/5&quot;]" />
-                          <If Condition="[isPriority]" sap:VirtualizedContainerService.HintSize="797,336" sap2010:WorkflowViewState.IdRef="If_7">
+                          <ui:ExcelWriteCell Cell="[&quot;ZQ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_60" SheetName="Template" Text="95%" />
+                          <ui:ExcelWriteCell Cell="[&quot;ZR&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_61" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (ACD Valid)&quot;).ToString]" />
+                          <ui:ExcelWriteCell Cell="[&quot;ZS&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_62" SheetName="Template" Text="[&quot;=IF(ZR&quot;+count.ToString+&quot;&gt;ZQ&quot;+count.ToString+&quot;,5,IF(ZR&quot;+count.ToString+&quot;=ZQ&quot;+count.ToString+&quot;,4,IF(ZR&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;&quot;&quot;&quot;+&quot;,3,1)))&quot;]" />
+                          <ui:ExcelWriteCell Cell="[&quot;ZT&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_63" SheetName="Template" Text="[&quot;=ZS&quot;+count.ToString+&quot;*$ZQ$3/5&quot;]" />
+                          <ui:ExcelWriteCell Cell="[&quot;ZU&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_64" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (Upgrade Knowledge)&quot;).ToString]" />
+                          <ui:ExcelWriteCell Cell="[&quot;ZV&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_65" SheetName="Template" Text="[&quot;=IF(ZU&quot;+count.ToString+&quot;&gt;1,5,IF(ZU&quot;+count.ToString+&quot;=1,3,1))&quot;]" />
+                          <ui:ExcelWriteCell Cell="[&quot;ZW&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_66" SheetName="Template" Text="[&quot;=ZV&quot;+count.ToString+&quot;*$ZU$3/5&quot;]" />
+                          <If Condition="[isPriority]" sap:VirtualizedContainerService.HintSize="797,717" sap2010:WorkflowViewState.IdRef="If_13">
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,560" sap2010:WorkflowViewState.IdRef="Sequence_38">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:ExcelWriteCell Cell="[&quot;NJ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_50" SheetName="Template" Text="100%" />
+                                <ui:ExcelWriteCell Cell="[&quot;ACD&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_113" SheetName="Template" Text="[&quot;=IFERROR(BT&quot;+count.ToString+&quot;+BX&quot;+count.ToString+&quot;+CC&quot;+count.ToString+&quot;+CG&quot;+count.ToString+&quot;,&quot;+&quot;&quot;&quot;&quot;+&quot;&quot;&quot;&quot;+&quot;)&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;ACE&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_114" SheetName="Template" Text="[&quot;=IFERROR(NV&quot;+count.ToString+&quot;+NZ&quot;+count.ToString+&quot;+OD&quot;+count.ToString+&quot;+OI&quot;+count.ToString+&quot;+OM&quot;+count.ToString+&quot;,&quot;+&quot;&quot;&quot;&quot;+&quot;&quot;&quot;&quot;+&quot;)&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;ACF&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_115" SheetName="Template" Text="[&quot;=ZT&quot;+count.ToString+&quot;+ZW&quot;+count.ToString]" />
+                                <ui:ExcelWriteCell Cell="[&quot;ACG&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_116" SheetName="Template" Text="[&quot;=SUM(ACD&quot;+count.ToString+&quot;:ACF&quot;+count.ToString+&quot;)&quot;]" />
                               </Sequence>
                             </If.Then>
                             <If.Else>
-                              <Sequence sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                              <Sequence sap:VirtualizedContainerService.HintSize="376,560" sap2010:WorkflowViewState.IdRef="Sequence_39">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:ExcelWriteCell Cell="[&quot;NJ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_51" SheetName="Template" Text="85%" />
+                                <ui:ExcelWriteCell Cell="[&quot;ACD&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_67" SheetName="Template" Text="[&quot;=IFERROR(BT&quot;+count.ToString+&quot;+BX&quot;+count.ToString+&quot;+CC&quot;+count.ToString+&quot;+CG&quot;+count.ToString+&quot;,&quot;+&quot;&quot;&quot;&quot;+&quot;&quot;&quot;&quot;+&quot;)&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;ACE&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_68" SheetName="Template" Text="[&quot;=NA&quot;+count.ToString+&quot;+NE&quot;+count.ToString+&quot;+NI&quot;+count.ToString+&quot;+NN&quot;+count.ToString+&quot;+NR&quot;+count.ToString]" />
+                                <ui:ExcelWriteCell Cell="[&quot;ACF&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_69" SheetName="Template" Text="[&quot;=ZT&quot;+count.ToString+&quot;+ZW&quot;+count.ToString]" />
+                                <ui:ExcelWriteCell Cell="[&quot;ACG&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_70" SheetName="Template" Text="[&quot;=SUM(ACD&quot;+count.ToString+&quot;:ACF&quot;+count.ToString+&quot;)&quot;]" />
                               </Sequence>
                             </If.Else>
                           </If>
-                          <ui:ExcelWriteCell Cell="[&quot;NK&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_52" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi FCR Score&quot;).ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;NL&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_53" SheetName="Template" Text="[CurrentRow.item(&quot;nc_tiket&quot;).ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;NM&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_54" SheetName="Template" Text="[&quot;=IF(NL&quot;+count.ToString+&quot;=1,0,IF(NK&quot;+count.ToString+&quot;&gt;NJ&quot;+count.ToString+&quot;,5,IF(NK&quot;+count.ToString+&quot;=NK&quot;+count.ToString+&quot;,4,IF(NK&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;&quot;&quot;&quot;+&quot;,3,1))))&quot;]" />
-                          <ui:ExcelWriteCell Cell="[&quot;NN&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_55" SheetName="Template" Text="[&quot;=NM&quot;+count.ToString+&quot;*$NJ$3/5&quot;]" />
-                          <ui:ExcelWriteCell Cell="[&quot;NO&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_56" SheetName="Template" Text="40%" />
-                          <ui:ExcelWriteCell Cell="[&quot;NP&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_57" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (TnPS  Score)&quot;).ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;NQ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_58" SheetName="Template" Text="[&quot;=IF(NP&quot;+count.ToString+&quot;&gt;NO&quot;+count.ToString+&quot;,5,IF(NP&quot;+count.ToString+&quot;=NO&quot;+count.ToString+&quot;,4,IF(NP&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;&quot;&quot;&quot;+&quot;,3,1)))&quot;]" />
-                          <ui:ExcelWriteCell Cell="[&quot;NR&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_59" SheetName="Template" Text="[&quot;=NQ&quot;+count.ToString+&quot;*$NO$3/5&quot;]" />
-                          <ui:ExcelWriteCell Cell="[&quot;YV&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_60" SheetName="Template" Text="95%" />
-                          <ui:ExcelWriteCell Cell="[&quot;YW&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_61" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (ACD Valid)&quot;).ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;YX&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_62" SheetName="Template" Text="[&quot;=IF(YW&quot;+count.ToString+&quot;&gt;YV&quot;+count.ToString+&quot;,5,IF(YW&quot;+count.ToString+&quot;=YV&quot;+count.ToString+&quot;,4,IF(YW&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;&quot;&quot;&quot;+&quot;,3,1)))&quot;]" />
-                          <ui:ExcelWriteCell Cell="[&quot;YY&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_63" SheetName="Template" Text="[&quot;=YX&quot;+count.ToString+&quot;*$YV$3/5&quot;]" />
-                          <ui:ExcelWriteCell Cell="[&quot;YZ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_64" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (Upgrade Knowledge)&quot;).ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ZA&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_65" SheetName="Template" Text="[&quot;=IF(YZ&quot;+count.ToString+&quot;&gt;1,5,IF(YZ&quot;+count.ToString+&quot;=1,3,1))&quot;]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ZB&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_66" SheetName="Template" Text="[&quot;=ZA&quot;+count.ToString+&quot;*$YZ$3/5&quot;]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ABI&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_67" SheetName="Template" Text="[&quot;=BT&quot;+count.ToString+&quot;+BX&quot;+count.ToString+&quot;+CC&quot;+count.ToString+&quot;+CG&quot;+count.ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ABJ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_68" SheetName="Template" Text="[&quot;=NA&quot;+count.ToString+&quot;+NE&quot;+count.ToString+&quot;+NI&quot;+count.ToString+&quot;+NN&quot;+count.ToString+&quot;+NR&quot;+count.ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ABK&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_69" SheetName="Template" Text="[&quot;=YY&quot;+count.ToString+&quot;+ZB&quot;+count.ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ABL&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_70" SheetName="Template" Text="[&quot;=SUM(ABI&quot;+count.ToString+&quot;:ABK&quot;+count.ToString+&quot;)&quot;]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ABP&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_71" SheetName="Template" Text="[CurrentRow.item(&quot;konseling&quot;).ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ABQ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_72" SheetName="Template" Text="[CurrentRow.item(&quot;BATL&quot;).ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ABR&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_73" SheetName="Template" Text="[CurrentRow.item(&quot;SP&quot;).ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ABS&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_74" SheetName="Template" Text="[&quot;=IF(ABR&quot;+count.ToString+&quot;&gt;0,&quot;+&quot;&quot;&quot;&quot;+&quot;GUGUR&quot;+&quot;&quot;&quot;&quot;+&quot;,&quot;+&quot;&quot;&quot;&quot;+&quot;TERIMA&quot;+&quot;&quot;&quot;&quot;+&quot;)&quot;]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ABT&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_75" SheetName="Template" Text="[&quot;=IF(ABS&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;GUGUR&quot;+&quot;&quot;&quot;&quot;+&quot;,0,IF(G&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;AGENT IBC CC TELKOMSEL&quot;+&quot;&quot;&quot;&quot;+&quot;,670000,IF(G&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;AGENT PRIORITY&quot;+&quot;&quot;&quot;&quot;+&quot;,800000,IF(G&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;AGENT PREPAID&quot;+&quot;&quot;&quot;&quot;+&quot;,670000,670000))))&quot;]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ABU&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_76" SheetName="Template" Text="[&quot;=ABT&quot;+count.ToString+&quot;*ABJ&quot;+count.ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ACM&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_77" SheetName="Template" Text="[&quot;=ABT&quot;+count.ToString+&quot;*ABI&quot;+count.ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ACN&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_78" SheetName="Template" Text="[&quot;=IF(M&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;YA&quot;+&quot;&quot;&quot;&quot;+&quot;,(W&quot;+count.ToString+&quot;/O&quot;+count.ToString+&quot;)*ABU&quot;+count.ToString+&quot;,IF(N&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;YA&quot;+&quot;&quot;&quot;&quot;+&quot;,(W&quot;+count.ToString+&quot;/O&quot;+count.ToString+&quot;)*ABU&quot;+count.ToString+&quot;,IF(U&quot;+count.ToString+&quot;&gt;0,(W&quot;+count.ToString+&quot;/O&quot;+count.ToString+&quot;)*ABU&quot;+count.ToString+&quot;,IF(ABP&quot;+count.ToString+&quot;&gt;0,ABU&quot;+count.ToString+&quot;*85%,IF(ABQ&quot;+count.ToString+&quot;&gt;0,ABU&quot;+count.ToString+&quot;*60%,IF(ABR&quot;+count.ToString+&quot;&gt;0,ABU&quot;+count.ToString+&quot;*0%,ABU&quot;+count.ToString+&quot;))))))&quot;]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ACO&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_79" SheetName="Template" Text="[&quot;=ABK&quot;+count.ToString+&quot;*ABT&quot;+count.ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ACQ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_80" SheetName="Template" Text="[&quot;=IF(ABS&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;GUGUR&quot;+&quot;&quot;&quot;&quot;+&quot;,0,IF(ABL&quot;+count.ToString+&quot;=100%,200000,IF(AND(ABL&quot;+count.ToString+&quot;&gt;=98%,ABL&quot;+count.ToString+&quot;&lt;100%),100000,IF(AND(ABL&quot;+count.ToString+&quot;&gt;=97%,ABL&quot;+count.ToString+&quot;&lt;99%),50000,))))&quot;]" />
-                          <ui:ExcelWriteCell Cell="[&quot;ACR&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_81" SheetName="Template" Text="[&quot;=SUM(ACM&quot;+count.ToString+&quot;:ACO&quot;+count.ToString+&quot;,ACQ&quot;+count.ToString+&quot;)&quot;]" />
+                          <ui:ExcelWriteCell Cell="[&quot;ACK&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_102" SheetName="Template" Text="[CurrentRow.item(&quot;konseling&quot;).ToString]" />
+                          <ui:ExcelWriteCell Cell="[&quot;ACL&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_103" SheetName="Template" Text="[CurrentRow.item(&quot;BATL&quot;).ToString]" />
+                          <ui:ExcelWriteCell Cell="[&quot;ACM&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_104" SheetName="Template" Text="[CurrentRow.item(&quot;SP&quot;).ToString]" />
+                          <ui:ExcelWriteCell Cell="[&quot;ACN&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_105" SheetName="Template" Text="[&quot;=IF(AI&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;TIDAK&quot;+&quot;&quot;&quot;&quot;+&quot;,&quot;+&quot;&quot;&quot;&quot;+&quot;GUGUR&quot;+&quot;&quot;&quot;&quot;+&quot;,IF(ACM&quot;+count.ToString+&quot;&gt;0,&quot;+&quot;&quot;&quot;&quot;+&quot;GUGUR&quot;+&quot;&quot;&quot;&quot;+&quot;,&quot;+&quot;&quot;&quot;&quot;+&quot;TERIMA&quot;+&quot;&quot;&quot;&quot;+&quot;))&quot;]" />
+                          <ui:ExcelWriteCell Cell="[&quot;ACO&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_106" SheetName="Template" Text="[&quot;=IF(ABS&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;GUGUR&quot;+&quot;&quot;&quot;&quot;+&quot;,0,IF(G&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;AGENT IBC CC TELKOMSEL&quot;+&quot;&quot;&quot;&quot;+&quot;,670000,IF(G&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;AGENT IBC CC TELKOMSEL PRIORITY&quot;+&quot;&quot;&quot;&quot;+&quot;,800000,IF(G&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;AGENT PREPAID&quot;+&quot;&quot;&quot;&quot;+&quot;,670000,))))&quot;]" />
+                          <ui:ExcelWriteCell Cell="[&quot;ACP&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_107" SheetName="Template" Text="[&quot;=ACO&quot;+count.ToString+&quot;*ACE&quot;+count.ToString]" />
+                          <ui:ExcelWriteCell Cell="[&quot;ADH&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_108" SheetName="Template" Text="[&quot;=IFERROR(ACO&quot;+count.ToString+&quot;*ACD&quot;+count.ToString+&quot;,&quot;+&quot;&quot;&quot;&quot;+&quot;&quot;&quot;&quot;+&quot;)&quot;]" />
+                          <ui:ExcelWriteCell Cell="[&quot;ADI&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_109" SheetName="Template" Text="[&quot;=IFERROR(IF(M&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;YA&quot;+&quot;&quot;&quot;&quot;+&quot;,(W&quot;+count.ToString+&quot;/O&quot;+count.ToString+&quot;)*ACP&quot;+count.ToString+&quot;,IF(N&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;YA&quot;+&quot;&quot;&quot;&quot;+&quot;,(W&quot;+count.ToString+&quot;/O&quot;+count.ToString+&quot;)*ACP&quot;+count.ToString+&quot;,IF(U&quot;+count.ToString+&quot;&gt;0,(W&quot;+count.ToString+&quot;/O&quot;+count.ToString+&quot;)*ACP&quot;+count.ToString+&quot;,IF(ACK&quot;+count.ToString+&quot;&gt;0,ACP&quot;+count.ToString+&quot;*85%,IF(ACL&quot;+count.ToString+&quot;&gt;0,ACP&quot;+count.ToString+&quot;*60%,IF(ACM&quot;+count.ToString+&quot;&gt;0,ACP&quot;+count.ToString+&quot;*0%,ACP&quot;+count.ToString+&quot;)))))),&quot;+&quot;&quot;&quot;&quot;+&quot;&quot;&quot;&quot;+&quot;)&quot;]" />
+                          <ui:ExcelWriteCell Cell="[&quot;ADJ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_110" SheetName="Template" Text="[&quot;=IFERROR(ACF&quot;+count.ToString+&quot;*ACO&quot;+count.ToString+&quot;,&quot;+&quot;&quot;&quot;&quot;+&quot;&quot;&quot;&quot;+&quot;)&quot;]" />
+                          <ui:ExcelWriteCell Cell="[&quot;ADL&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_111" SheetName="Template" Text="[&quot;=IFERROR(IF(ACN&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;GUGUR&quot;+&quot;&quot;&quot;&quot;+&quot;,0,IF(ACG&quot;+count.ToString+&quot;=100%,200000,IF(AND(ACG&quot;+count.ToString+&quot;&gt;=98%,ACG&quot;+count.ToString+&quot;&lt;100%),100000,IF(AND(ACG&quot;+count.ToString+&quot;&gt;=97%,ACG&quot;+count.ToString+&quot;&lt;99%),50000,)))),&quot;+&quot;&quot;&quot;&quot;+&quot;&quot;&quot;&quot;+&quot;)&quot;]" />
+                          <ui:ExcelWriteCell Cell="[&quot;ADM&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="797,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_112" SheetName="Template" Text="[&quot;=SUM(ADH&quot;+count.ToString+&quot;:ADJ&quot;+count.ToString+&quot;,ADL&quot;+count.ToString+&quot;)&quot;]" />
                           <Assign sap:VirtualizedContainerService.HintSize="797,60" sap2010:WorkflowViewState.IdRef="Assign_6">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Int32">[count]</OutArgument>
@@ -617,13 +661,13 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="388,176" sap2010:WorkflowViewState.IdRef="Sequence_33">
+        <Sequence sap:VirtualizedContainerService.HintSize="376,176" sap2010:WorkflowViewState.IdRef="Sequence_33">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="346,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Format data excel &quot;+ jabatan + &quot; tidak valid. Mohon cek kembali !&quot;]" />
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Format data excel &quot;+ jabatan + &quot; tidak valid. Mohon cek kembali !&quot;]" />
         </Sequence>
       </If.Else>
     </If>
