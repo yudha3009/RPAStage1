@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1444,13718</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1444,14316</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SPV_QIA_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -586,7 +586,7 @@
                                 <ui:ExcelWriteCell Cell="[&quot;NJ&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_51" SheetName="Template" Text="85%" />
                                 <ui:ExcelWriteCell Cell="[&quot;NK&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_52" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi FCR Score&quot;).ToString]" />
                                 <ui:ExcelWriteCell Cell="[&quot;NL&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_53" SheetName="Template" Text="[CurrentRow.item(&quot;nc_tiket&quot;).ToString]" />
-                                <ui:ExcelWriteCell Cell="[&quot;NM&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_54" SheetName="Template" Text="[&quot;=IF(NL&quot;+count.ToString+&quot;=1,0,IF(NK&quot;+count.ToString+&quot;&gt;NJ&quot;+count.ToString+&quot;,5,IF(NK&quot;+count.ToString+&quot;=NK&quot;+count.ToString+&quot;,4,IF(NK&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;&quot;&quot;&quot;+&quot;,3,1))))&quot;]" />
+                                <ui:ExcelWriteCell Cell="[&quot;NM&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_54" SheetName="Template" Text="[&quot;=IF(NL&quot;+count.ToString+&quot;=1,0,IF(NK&quot;+count.ToString+&quot;&gt;NJ&quot;+count.ToString+&quot;,5,IF(NJ&quot;+count.ToString+&quot;=NK&quot;+count.ToString+&quot;,4,IF(NK&quot;+count.ToString+&quot;=&quot;+&quot;&quot;&quot;&quot;+&quot;&quot;&quot;&quot;+&quot;,3,1))))&quot;]" />
                                 <ui:ExcelWriteCell Cell="[&quot;NN&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_55" SheetName="Template" Text="[&quot;=NM&quot;+count.ToString+&quot;*$NJ$3/5&quot;]" />
                                 <ui:ExcelWriteCell Cell="[&quot;NO&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_56" SheetName="Template" Text="40%" />
                                 <ui:ExcelWriteCell Cell="[&quot;NP&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_57" SheetName="Template" Text="[CurrentRow.item(&quot;Realisasi (TnPS  Score)&quot;).ToString]" />
