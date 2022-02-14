@@ -90,7 +90,6 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="AGENT IBC" sap:VirtualizedContainerService.HintSize="1454,15635" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -139,22 +138,22 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelReadCell Cell="AC8" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="1198,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_1" SheetName="AGENT IBC">
+            <ui:ExcelReadCell Cell="AC8" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="1198,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_1" SheetName="AGENT">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="x:String">[randomColumn1]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <ui:ExcelReadCell Cell="AP8" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="1198,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_2" SheetName="AGENT IBC">
+            <ui:ExcelReadCell Cell="AP8" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="1198,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_2" SheetName="AGENT">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="x:String">[randomColumn2]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <ui:ExcelReadCell Cell="BK8" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="1198,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_3" SheetName="AGENT IBC">
+            <ui:ExcelReadCell Cell="BK8" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="1198,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_3" SheetName="AGENT">
               <ui:ExcelReadCell.Result>
                 <OutArgument x:TypeArguments="x:String">[randomColumn3]</OutArgument>
               </ui:ExcelReadCell.Result>
             </ui:ExcelReadCell>
-            <ui:ExcelReadRange AddHeaders="False" DataTable="[rangeDt]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1198,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="B11" SheetName="AGENT IBC" />
+            <ui:ExcelReadRange AddHeaders="False" DataTable="[rangeDt]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1198,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="B11" SheetName="AGENT" />
             <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[rangeDt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1198,1928" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
@@ -317,7 +316,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:FileExistsX DisplayName="File Exists" Exists="[isExists]" sap:VirtualizedContainerService.HintSize="949,132" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;dd-MM-yyyy&quot;)+&quot;.xlsx&quot;]" />
+          <ui:FileExistsX DisplayName="File Exists" Exists="[isExists]" sap:VirtualizedContainerService.HintSize="949,132" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;MM-yyyy&quot;)+&quot;.xlsx&quot;]" />
           <Flowchart sap:VirtualizedContainerService.HintSize="949,51" sap2010:WorkflowViewState.IdRef="Flowchart_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -357,7 +356,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="729,1198" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;dd-MM-yyyy&quot;)+&quot;.xlsx&quot;]">
+                    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="729,1198" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;MM-yyyy&quot;)+&quot;.xlsx&quot;]">
                       <ui:ExcelApplicationScope.Body>
                         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                           <ActivityAction.Argument>
@@ -468,7 +467,7 @@
                       <av:Size x:Key="ShapeSize">200,66</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_10">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -490,7 +489,7 @@
             <x:Reference>__ReferenceID0</x:Reference>
             <x:Reference>__ReferenceID1</x:Reference>
           </Flowchart>
-          <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="949,12266" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;dd-MM-yyyy&quot;)+&quot;.xlsx&quot;]">
+          <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="949,12266" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;MM-yyyy&quot;)+&quot;.xlsx&quot;]">
             <ui:ExcelApplicationScope.Body>
               <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                 <ActivityAction.Argument>
@@ -786,9 +785,9 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Format data excel &quot;+ jabatan + &quot; tidak valid. Mohon cek kembali !&quot;]" />
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Format data &quot;+ jabatan + &quot; tidak valid. Mohon cek kembali !&quot;]" />
           <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAs04WIjkg+0eC/No0GbPbIgAAAAACAAAAAAAQZgAAAAEAACAAAADPuoI/RKl3wAHvukLDARqg0/UKJ+hJQFrkkXrzvFNEbAAAAAAOgAAAAAIAACAAAACLOZh2pWlKdG/WMtKvmAqRjK2TRVCTtv0w5YK+10mZdRAAAAAObE8MikyQmcJKz6DoAOPtQAAAADvwiX7cPq5gte2EYFSQD5FLgTBWbfzHzbEDtWv7o+N6kh//DBLa8lzPjlAJcrHU42PbilSPsYJk/iErd6YQPG0=" Result="[setPassword]" />
-          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Format data excel &quot;+ jabatan + &quot; tidak valid. Mohon cek kembali !&quot;]" DisplayName="Send Email To Sender" Email="rpacctsel@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="[setPassword]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Data Tidak Sesuai" To="[emailSender]">
+          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Format data  &quot;+ jabatan + &quot; tidak valid. Mohon cek kembali !&quot;]" DisplayName="Send Email To Sender" Email="rpacctsel@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="[setPassword]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Data Tidak Sesuai" To="[emailSender]">
             <ui:SendMail.Files>
               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
             </ui:SendMail.Files>
