@@ -89,7 +89,6 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="TRAINER" sap:VirtualizedContainerService.HintSize="1310,11851" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -493,7 +492,7 @@
                           <ui:ExcelWriteCell Cell="[&quot;V&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="653,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_60" SheetName="Template" Text="[&quot;=SUM(Q&quot;+count.ToString+&quot;:S&quot;+count.ToString+&quot;)&quot;]" />
                           <ui:ExcelWriteCell Cell="[&quot;W&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="653,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_14" SheetName="Template" Text="[CurrentRow.item(&quot;HK REALISASI&quot;).ToString]" />
                           <ui:ExcelWriteCell Cell="[&quot;X&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="653,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_15" SheetName="Template" Text="[CurrentRow.item(&quot;HK TUPRES&quot;).ToString]" />
-                          <ui:ExcelWriteCell Cell="[&quot;Y&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="653,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_61" SheetName="Template" Text="7,75" />
+                          <ui:ExcelWriteCell Cell="[&quot;Y&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="653,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_61" SheetName="Template" Text="7.75" />
                           <ui:ExcelWriteCell Cell="[&quot;BK&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="653,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_16" SheetName="Template" Text="[CurrentRow.item(&quot;KEDISIPLINAN&quot;).ToString]" />
                           <ui:ExcelWriteCell Cell="[&quot;BL&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="653,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_17" SheetName="Template" Text="[&quot;=$BK&quot;+count.ToString+&quot;/5*$BK$3&quot;]" />
                           <ui:ExcelWriteCell Cell="[&quot;BM&quot;+count.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="653,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_18" SheetName="Template" Text="[&quot;=BL&quot;+count.ToString+&quot;/$BK$3*100%&quot;]" />
