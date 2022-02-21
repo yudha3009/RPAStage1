@@ -119,6 +119,7 @@
     <Flowchart DisplayName="Flowchart-checkEmail" sap:VirtualizedContainerService.HintSize="651,760" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
         <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="mailList" />
+        <Variable x:TypeArguments="x:String" Name="setPassword" />
       </Flowchart.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -141,7 +142,7 @@
             <av:PointCollection x:Key="ConnectorLocation">290,345.5 290,375.5 280.141666666667,375.5 280.141666666667,506.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each Report" sap:VirtualizedContainerService.HintSize="712,1052" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[mailList]">
+        <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each Report" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[mailList]">
           <ui:ForEach.Body>
             <ActivityAction x:TypeArguments="snm:MailMessage">
               <ActivityAction.Argument>
@@ -202,7 +203,7 @@
                             <av:Size x:Key="ShapeSize">200,66</av:Size>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Sequence-getJabatan" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <Sequence DisplayName="Sequence-getJabatan" sap:VirtualizedContainerService.HintSize="1413,5367" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Default="-" Name="jabatan" />
                             <Variable x:TypeArguments="x:String" Name="subject" />
@@ -677,7 +678,7 @@
                             <av:Size x:Key="ShapeSize">200,66</av:Size>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="approval" sap:VirtualizedContainerService.HintSize="1101,6104" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                        <Sequence DisplayName="approval" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_30">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:Int32" Default="0" Name="count" />
                             <Variable x:TypeArguments="x:Int32" Default="0" Name="checkApproval" />
@@ -1147,12 +1148,17 @@
                     <av:Size x:Key="ShapeSize">200,66</av:Size>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                <Sequence sap:VirtualizedContainerService.HintSize="939,1872" sap2010:WorkflowViewState.IdRef="Sequence_27">
                   <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Name="setPassword" />
                     <Variable x:TypeArguments="x:Int32" Default="0" Name="count" />
                     <Variable x:TypeArguments="x:String" Default="-" Name="tempJabatan" />
                     <Variable x:TypeArguments="sd:DataTable" Name="dtReport" />
+                    <Variable x:TypeArguments="scg:List(x:String)" Name="listJabatan">
+                      <Variable.Default>
+                        <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="new List(Of String) from {&quot;ADMIN LAYANAN CC TELKOMSEL&quot;,&quot;ADMIN LO CC TELKOMSEL&quot;,&quot;ADMIN OFFICE CC TELKOMSEL&quot;,&quot;AGENT IBC CC TELKOMSEL&quot;,&quot;AGENT IBC PRIORITY CC TELKOMSEL&quot;,&quot;CHO IBC CC TELKOMSEL&quot;,&quot;DOCUMENT CONTROL CC TELKOMSEL&quot;,&quot;GENERAL AFFAIRS CC TELKOMSEL&quot;,&quot;HR SUPPORT CC TELKOMSEL&quot;,&quot;OPERATION PLAN CC TELKOMSEL&quot;,&quot;PC CLEANING CC TELKOMSEL&quot;,&quot;QCO IBC CC TELKOMSEL&quot;,&quot;SPV CHO CC TELKOMSEL&quot;,&quot;SPV IT CC TELKOMSEL&quot;,&quot;SPV OPS IBC CC TELKOMSEL&quot;,&quot;SPV QCO IBC CC TELKOMSEL&quot;,&quot;SPV QIA CC TELKOMSEL&quot;,&quot;STAFF IT CC TELKOMSEL&quot;,&quot;TL CH CC TELKOMSEL&quot;,&quot;TL KORLAP CC TELKOMSEL&quot;,&quot;TL KORNAS CC TELKOMSEL&quot;,&quot;TL OPS IBC CC TELKOMSEL&quot;,&quot;TL QCO IBC CC TELKOMSEL&quot;,&quot;TRAINER CC TELKOMSEL&quot;}" />
+                      </Variable.Default>
+                    </Variable>
+                    <Variable x:TypeArguments="x:String" Name="notExistsJabatan" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1160,22 +1166,22 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ReadRange AddHeaders="False" DataTable="[dtReport]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="560,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" Range="A5" SheetName="Template" WorkbookPath="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;MM-yyyy&quot;)+&quot;.xlsx&quot;]" />
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtReport]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,651" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                  <ui:ReadRange AddHeaders="False" DataTable="[dtReport]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="897,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" Range="A5" SheetName="Template" WorkbookPath="[&quot;D:\Report\Report &quot;+Now.ToString(&quot;MM-yyyy&quot;)+&quot;.xlsx&quot;]" />
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtReport]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="897,713" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,531" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,593" sap2010:WorkflowViewState.IdRef="Sequence_86">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <If Condition="[tempJabatan &lt;&gt; CurrentRow.Item(6).ToString AND CurrentRow.Item(6).ToString &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="484,439" sap2010:WorkflowViewState.IdRef="If_18">
+                          <If Condition="[tempJabatan &lt;&gt; CurrentRow.Item(6).ToString AND CurrentRow.Item(6).ToString &lt;&gt; &quot;&quot;]" sap:VirtualizedContainerService.HintSize="484,501" sap2010:WorkflowViewState.IdRef="If_18">
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                              <Sequence sap:VirtualizedContainerService.HintSize="304,314" sap2010:WorkflowViewState.IdRef="Sequence_84">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1197,6 +1203,7 @@
                                     <InArgument x:TypeArguments="x:Int32">[count+1]</InArgument>
                                   </Assign.Value>
                                 </Assign>
+                                <RemoveFromCollection x:TypeArguments="x:String" Collection="[listJabatan]" DisplayName="Remove From Collection" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="RemoveFromCollection`1_1" Item="[tempJabatan]" />
                               </Sequence>
                             </If.Then>
                             <If.Else>
@@ -1213,15 +1220,15 @@
                       </ActivityAction>
                     </ui:ForEachRow.Body>
                   </ui:ForEachRow>
-                  <If Condition="[count = 24]" sap:VirtualizedContainerService.HintSize="560,677" sap2010:WorkflowViewState.IdRef="If_16">
+                  <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="897,22" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAs04WIjkg+0eC/No0GbPbIgAAAAACAAAAAAAQZgAAAAEAACAAAAClTS8ZmgkhimsesXlpYc7wSTnWU06ebbz6jTwJVQwlBwAAAAAOgAAAAAIAACAAAABq3lgX258J09IoIwEup5znobSlxRPOFqC1eXTTfZEcaRAAAAD4bqEIsumG/0LvHIC9L+aoQAAAAPMHBrzcoPbGEoHCnNZBQxJHY6EDCCu9KnawRxDlNHDj/c++50dS4gcQ573mSH1jnrdMRvTadvi7aUMbcVGvUbw=" Result="[setPassword]" />
+                  <If Condition="[count = 24]" sap:VirtualizedContainerService.HintSize="897,714" sap2010:WorkflowViewState.IdRef="If_16">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="376,490" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,428" sap2010:WorkflowViewState.IdRef="Sequence_79">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAs04WIjkg+0eC/No0GbPbIgAAAAACAAAAAAAQZgAAAAEAACAAAAClTS8ZmgkhimsesXlpYc7wSTnWU06ebbz6jTwJVQwlBwAAAAAOgAAAAAIAACAAAABq3lgX258J09IoIwEup5znobSlxRPOFqC1eXTTfZEcaRAAAAD4bqEIsumG/0LvHIC9L+aoQAAAAPMHBrzcoPbGEoHCnNZBQxJHY6EDCCu9KnawRxDlNHDj/c++50dS4gcQ573mSH1jnrdMRvTadvi7aUMbcVGvUbw=" Result="[setPassword]" />
                         <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Berikut data Tupres All SDM." DisplayName="Send Email To HR" Email="rpacctsel@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Password="[setPassword]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Report Tupres" To="hrcctselbandung@gmail.com">
                           <ui:SendMail.Files>
                             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
@@ -1229,7 +1236,7 @@
                             </scg:List>
                           </ui:SendMail.Files>
                         </ui:SendMail>
-                        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Berikut data Tupres All SDM." DisplayName="Send Email To HR" Email="rpacctsel@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="SendMail_8" IsBodyHtml="False" Password="[setPassword]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Report Tupres " To="mas.prass009@gmail.com">
+                        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="Berikut data Tupres All SDM." DisplayName="Send Email To Me" Email="rpacctsel@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="SendMail_8" IsBodyHtml="False" Password="[setPassword]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Report Tupres " To="mas.prass009@gmail.com">
                           <ui:SendMail.Files>
                             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                               <InArgument x:TypeArguments="x:String">["D:/Report/Report "+Now.ToString("MM-yyyy")+".xlsx"]</InArgument>
@@ -1239,16 +1246,45 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_80">
+                      <Sequence sap:VirtualizedContainerService.HintSize="476,556" sap2010:WorkflowViewState.IdRef="Sequence_80">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
+                        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="434,276" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[listJabatan]">
+                          <ui:ForEach.Body>
+                            <ActivityAction x:TypeArguments="x:Object">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_91">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_32">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[notExistsJabatan]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[notExistsJabatan+item.ToString+Environment.NewLine]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ForEach.Body>
+                        </ui:ForEach>
+                        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Berikut list jabatan yang belum terdaftar pada tupres : &quot;+Environment.NewLine+notExistsJabatan]" DisplayName="Send Email To Me" Email="rpacctsel@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="434,148" sap2010:WorkflowViewState.IdRef="SendMail_9" IsBodyHtml="False" Password="[setPassword]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="Report Tupres " To="mas.prass009@gmail.com">
+                          <ui:SendMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
+                          </ui:SendMail.Files>
+                        </ui:SendMail>
                       </Sequence>
                     </If.Else>
                   </If>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="560,84" sap2010:WorkflowViewState.IdRef="MessageBox_11" Text="[&quot;Selesai. &quot;+Environment.NewLine+&quot;Letak File : D\Report\Report &quot;+Now.ToString(&quot;MM-yyyy&quot;)+&quot;.xlsx&quot;]">
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="897,84" sap2010:WorkflowViewState.IdRef="MessageBox_11" Text="[&quot;Selesai. &quot;+Environment.NewLine+&quot;Letak File : D\Report\Report &quot;+Now.ToString(&quot;MM-yyyy&quot;)+&quot;.xlsx&quot;]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
