@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>960,917</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>700,917</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>checkEmail_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="45">
@@ -142,7 +142,7 @@
             <av:PointCollection x:Key="ConnectorLocation">290,345.5 290,375.5 280.141666666667,375.5 280.141666666667,506.5</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each Report" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[mailList]">
+        <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each Report" sap:VirtualizedContainerService.HintSize="712,1052" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[mailList]">
           <ui:ForEach.Body>
             <ActivityAction x:TypeArguments="snm:MailMessage">
               <ActivityAction.Argument>
@@ -203,7 +203,7 @@
                             <av:Size x:Key="ShapeSize">200,66</av:Size>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Sequence-getJabatan" sap:VirtualizedContainerService.HintSize="1413,5367" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <Sequence DisplayName="Sequence-getJabatan" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Default="-" Name="jabatan" />
                             <Variable x:TypeArguments="x:String" Name="subject" />
@@ -678,7 +678,7 @@
                             <av:Size x:Key="ShapeSize">200,66</av:Size>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="approval" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                        <Sequence DisplayName="approval" sap:VirtualizedContainerService.HintSize="1101,6104" sap2010:WorkflowViewState.IdRef="Sequence_30">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:Int32" Default="0" Name="count" />
                             <Variable x:TypeArguments="x:Int32" Default="0" Name="checkApproval" />
@@ -875,7 +875,7 @@
                                     </ActivityAction>
                                   </ui:ForEachRow.Body>
                                 </ui:ForEachRow>
-                                <If Condition="[checkApproval = totalRow AND tempCountJabatan = 24]" sap:VirtualizedContainerService.HintSize="981,3075" sap2010:WorkflowViewState.IdRef="If_10">
+                                <If Condition="[checkApproval = totalRow AND tempCountJabatan = 21]" sap:VirtualizedContainerService.HintSize="981,3075" sap2010:WorkflowViewState.IdRef="If_10">
                                   <If.Then>
                                     <Sequence sap:VirtualizedContainerService.HintSize="800,2888" sap2010:WorkflowViewState.IdRef="Sequence_53">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -1067,7 +1067,7 @@
                                           </If.Else>
                                         </If>
                                         <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="653,22" sap2010:WorkflowViewState.IdRef="GetPassword_3" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAs04WIjkg+0eC/No0GbPbIgAAAAACAAAAAAAQZgAAAAEAACAAAADuL2AC3VR2FOujRLRLtKWT+xKcRVDqRcxOxdvj4LfJyQAAAAAOgAAAAAIAACAAAAAbdEQ2D1HXcb9lp8TzI2Rr43YnbfrPS0kJcImsUNU1OhAAAAALd0Gtb7xwpBFhsEBX3T87QAAAAEo/uyS8nbomVScLXA06yY42K/j03PMBAJ6ljXm+lE8Qe5tyLKjZuhJjBhwH6ZznBpGS0sZrwysGPlrR3FCofSQ=" Result="[password]" />
-                                        <ui:SendMail Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Send SMTP Mail Message" Email="rpacctsel@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="653,148" sap2010:WorkflowViewState.IdRef="SendMail_5" IsBodyHtml="False" Password="[password]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="[&quot;TUPRES People Performence &quot;+subjectMonth+&quot;-&quot;+subjectYear]" To="ess.infomedia@gmail.com;ishfrans25@gmail.com;dyana.rahayu108@gmail.com;ardhie.infomedia@gmail.com;puriastuti2@gmail.com;ess.infomedia2@gmail.com">
+                                        <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Dengan Hormat. &quot;+Environment.NewLine+&quot;Berikut merupakan data tupres SDM Layanan CC TELKOMSEL. &quot;+Environment.NewLine+&quot;RPA (Robotic Proccess Automation)&quot;]" DisplayName="Send SMTP Mail Message" Email="rpacctsel@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="653,148" sap2010:WorkflowViewState.IdRef="SendMail_5" IsBodyHtml="False" Password="[password]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="[&quot;TUPRES SDM Contact Center Telkomsel &quot;+subjectMonth+&quot;-&quot;+subjectYear]" To="ess.infomedia@gmail.com;ishfrans25@gmail.com;dyana.rahayu108@gmail.com;ardhie.infomedia@gmail.com;puriastuti2@gmail.com;ess.infomedia2@gmail.com">
                                           <ui:SendMail.Files>
                                             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                                               <InArgument x:TypeArguments="x:String">["Approval\"+fileName]</InArgument>
@@ -1148,14 +1148,14 @@
                     <av:Size x:Key="ShapeSize">200,66</av:Size>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence sap:VirtualizedContainerService.HintSize="939,1872" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_27">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Int32" Default="0" Name="count" />
                     <Variable x:TypeArguments="x:String" Default="-" Name="tempJabatan" />
                     <Variable x:TypeArguments="sd:DataTable" Name="dtReport" />
                     <Variable x:TypeArguments="scg:List(x:String)" Name="listJabatan">
                       <Variable.Default>
-                        <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="new List(Of String) from {&quot;ADMIN LAYANAN CC TELKOMSEL&quot;,&quot;ADMIN LO CC TELKOMSEL&quot;,&quot;ADMIN OFFICE CC TELKOMSEL&quot;,&quot;AGENT IBC CC TELKOMSEL&quot;,&quot;AGENT IBC PRIORITY CC TELKOMSEL&quot;,&quot;CHO IBC CC TELKOMSEL&quot;,&quot;DOCUMENT CONTROL CC TELKOMSEL&quot;,&quot;GENERAL AFFAIRS CC TELKOMSEL&quot;,&quot;HR SUPPORT CC TELKOMSEL&quot;,&quot;OPERATION PLAN CC TELKOMSEL&quot;,&quot;PC CLEANING CC TELKOMSEL&quot;,&quot;QCO IBC CC TELKOMSEL&quot;,&quot;SPV CHO CC TELKOMSEL&quot;,&quot;SPV IT CC TELKOMSEL&quot;,&quot;SPV OPS IBC CC TELKOMSEL&quot;,&quot;SPV QCO IBC CC TELKOMSEL&quot;,&quot;SPV QIA CC TELKOMSEL&quot;,&quot;STAFF IT CC TELKOMSEL&quot;,&quot;TL CH CC TELKOMSEL&quot;,&quot;TL KORLAP CC TELKOMSEL&quot;,&quot;TL KORNAS CC TELKOMSEL&quot;,&quot;TL OPS IBC CC TELKOMSEL&quot;,&quot;TL QCO IBC CC TELKOMSEL&quot;,&quot;TRAINER CC TELKOMSEL&quot;}" />
+                        <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="new List(Of String) from {&quot;ADMIN LAYANAN CC TELKOMSEL&quot;,&quot;ADMIN LO CC TELKOMSEL&quot;,&quot;ADMIN OFFICE CC TELKOMSEL&quot;,&quot;AGENT IBC CC TELKOMSEL&quot;,&quot;AGENT IBC PRIORITY CC TELKOMSEL&quot;,&quot;CHO IBC CC TELKOMSEL&quot;,&quot;HR SUPPORT CC TELKOMSEL&quot;,&quot;OPERATION PLAN CC TELKOMSEL&quot;,&quot;PC CLEANING CC TELKOMSEL&quot;,&quot;QCO IBC CC TELKOMSEL&quot;,&quot;SPV CHO CC TELKOMSEL&quot;,&quot;SPV IT CC TELKOMSEL&quot;,&quot;SPV OPS IBC CC TELKOMSEL&quot;,&quot;SPV QCO IBC CC TELKOMSEL&quot;,&quot;SPV QIA CC TELKOMSEL&quot;,&quot;STAFF IT CC TELKOMSEL&quot;,&quot;TL CH CC TELKOMSEL&quot;,&quot;TL KORNAS CC TELKOMSEL&quot;,&quot;TL OPS IBC CC TELKOMSEL&quot;,&quot;TL QCO IBC CC TELKOMSEL&quot;,&quot;TRAINER CC TELKOMSEL&quot;}" />
                       </Variable.Default>
                     </Variable>
                     <Variable x:TypeArguments="x:String" Name="notExistsJabatan" />
@@ -1221,7 +1221,7 @@
                     </ui:ForEachRow.Body>
                   </ui:ForEachRow>
                   <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="897,22" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAs04WIjkg+0eC/No0GbPbIgAAAAACAAAAAAAQZgAAAAEAACAAAAClTS8ZmgkhimsesXlpYc7wSTnWU06ebbz6jTwJVQwlBwAAAAAOgAAAAAIAACAAAABq3lgX258J09IoIwEup5znobSlxRPOFqC1eXTTfZEcaRAAAAD4bqEIsumG/0LvHIC9L+aoQAAAAPMHBrzcoPbGEoHCnNZBQxJHY6EDCCu9KnawRxDlNHDj/c++50dS4gcQ573mSH1jnrdMRvTadvi7aUMbcVGvUbw=" Result="[setPassword]" />
-                  <If Condition="[count = 24]" sap:VirtualizedContainerService.HintSize="897,714" sap2010:WorkflowViewState.IdRef="If_16">
+                  <If Condition="[count = 21]" sap:VirtualizedContainerService.HintSize="897,714" sap2010:WorkflowViewState.IdRef="If_16">
                     <If.Then>
                       <Sequence sap:VirtualizedContainerService.HintSize="376,428" sap2010:WorkflowViewState.IdRef="Sequence_79">
                         <sap:WorkflowViewStateService.ViewState>
