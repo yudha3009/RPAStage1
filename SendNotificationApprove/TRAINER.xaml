@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>700,515</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>700,569</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>TRAINER_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -39,6 +39,11 @@
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -69,19 +74,56 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="TRAINER" sap:VirtualizedContainerService.HintSize="376,388" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="TRAINER" sap:VirtualizedContainerService.HintSize="478,504" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Berikut merupakan hasil TUPRES anda : &quot;+Environment.NewLine+&#xD;&#xA;&quot;Perner : &quot;+CurrentRow.item(1).ToString()+Environment.NewLine+&#xD;&#xA;&quot;Nama : &quot;+CurrentRow.item(2).ToString()+Environment.NewLine+&#xD;&#xA;&quot;Jabatan : &quot;+CurrentRow.item(6).ToString()+Environment.NewLine+&#xD;&#xA;&quot;Status Cumil : &quot;+CurrentRow.item(12).ToString()+Environment.NewLine+&#xD;&#xA;&quot;Status Resign : &quot;+CurrentRow.item(13).ToString()+Environment.NewLine+&#xD;&#xA;&quot;Pola Layanan : &quot;+CurrentRow.item(14).ToString()+Environment.NewLine+&#xD;&#xA;&quot;HK Roster : &quot;+CurrentRow.item(15).ToString()+Environment.NewLine+&#xD;&#xA;&quot;S : &quot;+CurrentRow.item(16).ToString()+Environment.NewLine+&#xD;&#xA;&quot;A : &quot;+CurrentRow.item(17).ToString()+Environment.NewLine+&#xD;&#xA;&quot;CDK : &quot;+CurrentRow.item(18).ToString()+Environment.NewLine+&#xD;&#xA;&quot;CT : &quot;+CurrentRow.item(19).ToString()+Environment.NewLine+&#xD;&#xA;&quot;OP : &quot;+CurrentRow.item(20).ToString()+Environment.NewLine+&#xD;&#xA;&quot;Jumlah Cuti : &quot;+CurrentRow.item(21).ToString()+Environment.NewLine+&#xD;&#xA;&quot;HK Realisasi : &quot;+CurrentRow.item(22).ToString()+Environment.NewLine+&#xD;&#xA;&quot;HK TUPRES : &quot;+CurrentRow.item(23).ToString()+Environment.NewLine+&#xD;&#xA;&quot;Jam Efektif : &quot;+CurrentRow.item(24).ToString()+Environment.NewLine+&#xD;&#xA;&quot;Kedisiplinan : &quot;+(Convert.ToDecimal(CurrentRow.item(64))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Kehadiran : &quot;+(Convert.ToDecimal(CurrentRow.item(67))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Pelaksanaan pelatihan hardskill : &quot;+(Convert.ToDecimal(CurrentRow.item(336))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Pelaksanaan pelatihan softskill : &quot;+(Convert.ToDecimal(CurrentRow.item(339))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Report evaluasi hasil pelatihan : &quot;+(Convert.ToDecimal(CurrentRow.item(342))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Pencapaian target First  Call Resolution (FCR) : &quot;+(Convert.ToDecimal(CurrentRow.item(345))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Populasi pencapaian PROPPER : &quot;+(Convert.ToDecimal(CurrentRow.item(348))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Pencapaian CES : &quot;+(Convert.ToDecimal(CurrentRow.item(351))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Pencapaian Populasi QA SCORE Layanan : &quot;+(Convert.ToDecimal(CurrentRow.item(354))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Populasi Agent yang mencapai nilai Post Test pada setiap training produk/Program : &quot;+(Convert.ToDecimal(CurrentRow.item(357))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Populasi kandidat Agent pada kelulusan Initial Training Produk : &quot;+(Convert.ToDecimal(CurrentRow.item(360))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;TOTAL KINERJA : &quot;+(Convert.ToDecimal(CurrentRow.item(746))*100).ToString()+&quot;%&quot;+Environment.NewLine]" DisplayName="Send SMTP Mail Message" Email="rpacctsel@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,296" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="[password]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="HASIL TUPRES" To="[email]">
-      <ui:SendMail.Files>
-        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-      </ui:SendMail.Files>
-    </ui:SendMail>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,315" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,237" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Berikut merupakan hasil TUPRES anda : &quot;+Environment.NewLine+&#xA;&quot;Perner : &quot;+CurrentRow.item(1).ToString()+Environment.NewLine+&#xA;&quot;Nama : &quot;+CurrentRow.item(2).ToString()+Environment.NewLine+&#xA;&quot;Jabatan : &quot;+CurrentRow.item(6).ToString()+Environment.NewLine+&#xA;&quot;Status Cumil : &quot;+CurrentRow.item(12).ToString()+Environment.NewLine+&#xA;&quot;Status Resign : &quot;+CurrentRow.item(13).ToString()+Environment.NewLine+&#xA;&quot;Pola Layanan : &quot;+CurrentRow.item(14).ToString()+Environment.NewLine+&#xA;&quot;HK Roster : &quot;+CurrentRow.item(15).ToString()+Environment.NewLine+&#xA;&quot;S : &quot;+CurrentRow.item(16).ToString()+Environment.NewLine+&#xA;&quot;A : &quot;+CurrentRow.item(17).ToString()+Environment.NewLine+&#xA;&quot;CDK : &quot;+CurrentRow.item(18).ToString()+Environment.NewLine+&#xA;&quot;CT : &quot;+CurrentRow.item(19).ToString()+Environment.NewLine+&#xA;&quot;OP : &quot;+CurrentRow.item(20).ToString()+Environment.NewLine+&#xA;&quot;Jumlah Cuti : &quot;+CurrentRow.item(21).ToString()+Environment.NewLine+&#xA;&quot;HK Realisasi : &quot;+CurrentRow.item(22).ToString()+Environment.NewLine+&#xA;&quot;HK TUPRES : &quot;+CurrentRow.item(23).ToString()+Environment.NewLine+&#xA;&quot;Jam Efektif : &quot;+CurrentRow.item(24).ToString()+Environment.NewLine+&#xA;&quot;Kedisiplinan : &quot;+(Convert.ToDecimal(CurrentRow.item(64))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xA;&quot;Kehadiran : &quot;+(Convert.ToDecimal(CurrentRow.item(67))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xA;&quot;Pelaksanaan pelatihan hardskill : &quot;+(Convert.ToDecimal(CurrentRow.item(336))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xA;&quot;Pelaksanaan pelatihan softskill : &quot;+(Convert.ToDecimal(CurrentRow.item(339))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xA;&quot;Report evaluasi hasil pelatihan : &quot;+(Convert.ToDecimal(CurrentRow.item(342))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xA;&quot;Pencapaian target First  Call Resolution (FCR) : &quot;+(Convert.ToDecimal(CurrentRow.item(345))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xA;&quot;Populasi pencapaian PROPPER : &quot;+(Convert.ToDecimal(CurrentRow.item(348))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xA;&quot;Pencapaian CES : &quot;+(Convert.ToDecimal(CurrentRow.item(351))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xA;&quot;Pencapaian Populasi QA SCORE Layanan : &quot;+(Convert.ToDecimal(CurrentRow.item(354))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xA;&quot;Populasi Agent yang mencapai nilai Post Test pada setiap training produk/Program : &quot;+(Convert.ToDecimal(CurrentRow.item(357))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xA;&quot;Populasi kandidat Agent pada kelulusan Initial Training Produk : &quot;+(Convert.ToDecimal(CurrentRow.item(360))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xA;&quot;TOTAL KINERJA : &quot;+(Convert.ToDecimal(CurrentRow.item(746))*100).ToString()+&quot;%&quot;+Environment.NewLine]" DisplayName="Send SMTP Mail Message" Email="rpacctsel@gmail.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="[password]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="HASIL TUPRES" To="[email]">
+            <ui:SendMail.Files>
+              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+            </ui:SendMail.Files>
+          </ui:SendMail>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="http://172.28.132.14/notif-bot-rpa/notif.php" sap:VirtualizedContainerService.HintSize="436,57" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" TimeoutMS="6000">
+      <ui:HttpClient.Attachments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Attachments>
+      <ui:HttpClient.Cookies>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Cookies>
+      <ui:HttpClient.Headers>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Headers>
+      <ui:HttpClient.Parameters>
+        <InArgument x:TypeArguments="x:String" x:Key="perner">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow.item(1).ToString()" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="message">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;Berikut merupakan hasil TUPRES anda : &quot;+Environment.NewLine+&#xD;&#xA;&quot;Perner : &quot;+CurrentRow.item(1).ToString()+Environment.NewLine+&#xD;&#xA;&quot;Nama : &quot;+CurrentRow.item(2).ToString()+Environment.NewLine+&#xD;&#xA;&quot;Jabatan : &quot;+CurrentRow.item(6).ToString()+Environment.NewLine+&#xD;&#xA;&quot;Status Cumil : &quot;+CurrentRow.item(12).ToString()+Environment.NewLine+&#xD;&#xA;&quot;Status Resign : &quot;+CurrentRow.item(13).ToString()+Environment.NewLine+&#xD;&#xA;&quot;Pola Layanan : &quot;+CurrentRow.item(14).ToString()+Environment.NewLine+&#xD;&#xA;&quot;HK Roster : &quot;+CurrentRow.item(15).ToString()+Environment.NewLine+&#xD;&#xA;&quot;S : &quot;+CurrentRow.item(16).ToString()+Environment.NewLine+&#xD;&#xA;&quot;A : &quot;+CurrentRow.item(17).ToString()+Environment.NewLine+&#xD;&#xA;&quot;CDK : &quot;+CurrentRow.item(18).ToString()+Environment.NewLine+&#xD;&#xA;&quot;CT : &quot;+CurrentRow.item(19).ToString()+Environment.NewLine+&#xD;&#xA;&quot;OP : &quot;+CurrentRow.item(20).ToString()+Environment.NewLine+&#xD;&#xA;&quot;Jumlah Cuti : &quot;+CurrentRow.item(21).ToString()+Environment.NewLine+&#xD;&#xA;&quot;HK Realisasi : &quot;+CurrentRow.item(22).ToString()+Environment.NewLine+&#xD;&#xA;&quot;HK TUPRES : &quot;+CurrentRow.item(23).ToString()+Environment.NewLine+&#xD;&#xA;&quot;Jam Efektif : &quot;+CurrentRow.item(24).ToString()+Environment.NewLine+&#xD;&#xA;&quot;Kedisiplinan : &quot;+(Convert.ToDecimal(CurrentRow.item(64))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Kehadiran : &quot;+(Convert.ToDecimal(CurrentRow.item(67))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Pelaksanaan pelatihan hardskill : &quot;+(Convert.ToDecimal(CurrentRow.item(336))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Pelaksanaan pelatihan softskill : &quot;+(Convert.ToDecimal(CurrentRow.item(339))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Report evaluasi hasil pelatihan : &quot;+(Convert.ToDecimal(CurrentRow.item(342))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Pencapaian target First  Call Resolution (FCR) : &quot;+(Convert.ToDecimal(CurrentRow.item(345))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Populasi pencapaian PROPPER : &quot;+(Convert.ToDecimal(CurrentRow.item(348))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Pencapaian CES : &quot;+(Convert.ToDecimal(CurrentRow.item(351))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Pencapaian Populasi QA SCORE Layanan : &quot;+(Convert.ToDecimal(CurrentRow.item(354))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Populasi Agent yang mencapai nilai Post Test pada setiap training produk/Program : &quot;+(Convert.ToDecimal(CurrentRow.item(357))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;Populasi kandidat Agent pada kelulusan Initial Training Produk : &quot;+(Convert.ToDecimal(CurrentRow.item(360))*100).ToString()+&quot;%&quot;+Environment.NewLine+&#xD;&#xA;&quot;TOTAL KINERJA : &quot;+(Convert.ToDecimal(CurrentRow.item(746))*100).ToString()+&quot;%&quot;+Environment.NewLine" />
+        </InArgument>
+      </ui:HttpClient.Parameters>
+      <ui:HttpClient.UrlSegments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.UrlSegments>
+    </ui:HttpClient>
   </Sequence>
 </Activity>
